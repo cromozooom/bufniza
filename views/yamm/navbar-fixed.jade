@@ -1,0 +1,183 @@
+// Demo navbar 
+.navbar.yamm.navbar-default.navbar-fixed-top
+	.container
+		.navbar-header
+			button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand(href='#') PPT
+		#navbar-collapse-1.navbar-collapse.collapse
+			ul.nav.navbar-nav.navbar-right
+				//- SOLUTIONS
+				li.dropdown.yamm-fw
+					a.dropdown-toggle(href='#', data-toggle='dropdown') SOLUTIONS
+						b.caret
+					ul.dropdown-menu
+						li
+							// Content container to add padding 
+							.yamm-content
+								.row
+									ul.col-sm-6.list-unstyled
+										li
+											p: strong
+												a(href="#") Network Equipment Manufacturers
+											hr
+											ul
+												li: a(href='#') SIMULATION OVER THE RADIO INTERFACES (GSM, UMTS/HSPA+, LTE)
+													ul
+														li: a(href='#') Inter-RAT & Handover Testing
+														li: a(href='#') Load & Stress Testing
+												li: a(href='#') QoS TESTING
+													ul
+														li: a(href='#') Real World Simulation (Fading, Mobility and Smartphones)
+												li: a(href='#') CORE NETWORK ELEMENTS SOLUTIONS
+													ul
+														li: a(href='#') Core Network Simulating Solutions
+														li: a(href='#') IP-PBX Testing
+														li: a(href='#') SMSC Load Testing
+												li: a(href='#') SYSTEM AND INTEGRATION TESTING
+													ul
+														li: a(href='#') Core Network Simulating Solutions
+														li: a(href='#') IP-PBX Testing
+														li: a(href='#') SMSC Load Testing
+
+
+									ul.col-sm-3.list-unstyled
+										li
+											p: strong
+												a(href="#") Operators &amp; Service Providers
+											hr
+											ul
+												li: a(href='#') ACCEPTANCE TESTING
+													ul
+														li: a(href='#') Handover &amp; inter-RAT
+														li: a(href='#') IP-PBX Testing Suite
+														li: a(href='#') QoS Testing
+														li: a(href='#') SMSC Load Testing
+												li: a(href='#') QUALITY ASSURANCE
+													ul
+														li: a(href='#') Extensive Monitoring System
+
+												li: a(href='#') REVENUE ASSURANCE
+													ul
+														li: a(href='#') Ticket Producer
+
+
+									ul.col-sm-3.list-unstyled
+										li
+											p: strong
+												a(href="#") Vertical Solutions
+											hr
+											ul
+												li: a(href='#') ERTMS APPLICATION TESTING
+												li: a(href='#') EMERGENCY MANAGEMENT
+													ul
+														li: a(href='#') EmergencyNET – Request for info
+
+				//- PRODUCTS
+				li.dropdown.yamm-fw
+					a.dropdown-toggle(href='#', data-toggle='dropdown') PRODUCTS
+						b.caret
+					ul.dropdown-menu
+						li
+							// Content container to add padding 
+							.yamm-content
+								.row
+									ul.col-sm-12.list-unstyled
+										li
+											p: strong
+												a(href="#") Products Overview
+
+									ul.col-sm-5.list-unstyled
+										li: a(href='#') MULTITERMINAL SIMULATION OVER THE RADIO INTERFACE
+											hr
+											ul
+												li: a(href='#') MsSIM – GSM/EDGE and Evolved-EDGE
+												li: a(href='#') 3GSIM  – UMTS and HSPA/HSPA+
+												li: a(href='#') UeSIM – LTE and LTE-Advanced
+
+									ul.col-sm-4.list-unstyled
+										li: a(href='#') WIRED INTERFACE SIMULATION
+											hr
+											ul
+												li: a(href='#') Abis Tester – GSM Load &amp; Stress Testing
+												li: a(href='#') Iub Tester – UMTS Load &amp; Stress over STM-1 and IP
+
+									ul.col-sm-3.list-unstyled
+										li: a(href='#') COMMON ARCHITECTURE
+											hr
+											ul
+												li: a(href='#') Software Defined Radio Solutions
+												li: a(href='#') Wire-Speed Solutions
+
+				//- RESOURCES
+				li.dropdown
+					a.dropdown-toggle(data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false") RESOURCES
+						b.caret
+					ul.dropdown-menu
+						li: a(href='#') Product Brochures
+						li: a(href='#') Technical Support
+
+				//- ABOUT US
+				li.dropdown.yamm-fw
+					a.dropdown-toggle(href='#', data-toggle='dropdown') ABOUT US
+						b.caret
+					ul.dropdown-menu
+						li
+							// Content container to add padding
+							.yamm-content
+								.row
+									ul.col-sm-4.list-unstyled
+										li
+											p: strong
+												a(href='#') COMPANY
+											hr
+										li
+											p: strong
+												a(href='#') CAREERS
+											hr
+										li
+											p: strong
+												a(href='#') CONTACT
+											hr
+										li
+											p: strong
+												a(href='#') SOCIAL NETWORK
+											hr
+
+									ul.col-sm-8.list-unstyled
+										li
+											p: strong
+												a(href="#") Quality &amp; Corporate Social Responsibility
+											hr
+											ul.list-unstyled
+												li.col-sm-12
+													a(href='#') OUR COMMITMENT
+													hr
+													ul.col-sm-6
+														li: a(href='#') People
+														li: a(href='#') Health &amp; Safety
+														li: a(href='#') Environment
+
+													ul.col-sm-6
+														li: a(href='#') Procurement
+														li: a(href='#') Business Ethics
+														li: a(href='#') Conflict-Free Minerals
+												li.col-sm-12
+													hr
+													a(href='#') Quality and csr issue notification
+				//- CONTACT
+					li.dropdown
+						a.dropdown-toggle(href='#', data-toggle='dropdown') Contact
+
+				//- NEWS
+				li.dropdown
+					a.dropdown-toggle(href='#', data-toggle='dropdown') News
+
+				//- SEARCH
+				li
+					form.navbar-form.navbar-left(role="search")
+						.form-group
+							input.form-control(type="text" placeholder="Search")
+						button(type="submit" class="btn btn-default") Submit

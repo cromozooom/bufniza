@@ -1,0 +1,40 @@
+extends views/layout
+
+block content
+	section.carousel
+		#carousel-example-generic.carousel.slide(data-ride='carousel')
+			// Indicators
+				ol.carousel-indicators
+					li.active(data-target='#carousel-example-generic', data-slide-to='0')
+					li(data-target='#carousel-example-generic', data-slide-to='1')
+					li(data-target='#carousel-example-generic', data-slide-to='2')
+			// Wrapper for slides
+			.carousel-inner(role='listbox')
+				.item.active
+					img(src='assets/images/slider01.jpg', alt='slide01')
+					.carousel-caption
+						p.lead Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane !
+						.btn.ghost.btn-lg
+							| Vezi pagina de curs
+
+				.item
+					img(src='assets/images/slider01.jpg', alt='slide01')
+					.carousel-caption
+						p.lead Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane !
+						.btn.ghost.btn-lg
+							| Vezi pagina de curs
+				.item
+					img(src='assets/images/slider01.jpg', alt='slide01')
+					.carousel-caption
+						p.lead Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane !
+						.btn.ghost.btn-lg
+							| Vezi pagina de curs
+
+
+			// Controls
+			a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+				span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+				span.sr-only Previous
+			a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+				span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+				span.sr-only Next

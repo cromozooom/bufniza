@@ -1,0 +1,23 @@
+
+.btn.ghost
+	background: transparent
+	color: $brand-primary
+	border: 2px solid $brand-primary
+	font-weight: bold
+	// CSS Transition
+	-webkit-transition: background .3s ease-in-out, border .3s ease-in-out
+	-moz-transition: background .3s ease-in-out, border .3s ease-in-out
+	-ms-transition: background .3s ease-in-out, border .3s ease-in-out
+	-o-transition: background .3s ease-in-out, border .3s ease-in-out
+	transition: background .3s ease-in-out, border .3s ease-in-out
+
+.ghost:hover, .ghost:active
+	color: lighten(complement($brand-primary), 80%)
+	background: $brand-primary
+	border: 2px solid $brand-primary
+
+
+.ghost
+	-webkit-border-radius: 0
+	-moz-border-radius: 0
+	border-radius: 0
