@@ -31,6 +31,10 @@ section.descriere
 			img
 				width: 60%
 
+	@media (max-width: $screen-xs-max)
+			img
+				width: 100%
+
 section.cursuri
 	background: url("../images/section_head_bg.png") repeat-x 50% 0
 	padding-top: 5em
@@ -44,6 +48,13 @@ section.cursuri
 		margin-top: 3em
 	a.lead
 		font-size: 1.2em
+
+	@media (max-width: $screen-xs-max)
+		svg
+			margin-top: 6em
+		.first
+			svg
+				margin-top: 0em
 
 
 $btn-ghost-color-type_one: darken(#13a89e, 0%)
