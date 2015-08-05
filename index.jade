@@ -1,0 +1,41 @@
+extends views/layout
+
+block content
+	include views/carousel
+	include views/descriere
+	section.cursuri
+		.container
+			.row
+				.col-xs-12.text-center
+					h2
+						| Citeva dintre cursurile mele:
+				.col-xs-12.col-md-4.text-center
+					svg(viewBox="0 0 237 237" width="236" height="236")
+						use(xlink:href="#sah" x="0" y="0")
+					h3.text-center
+						| Sah mat!
+					p
+						| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor, invatand sa
+					a.lead(href="" title="")
+						| Vezi pagina de curs
+				.col-xs-12.col-md-4.text-center
+					svg(viewBox="0 0 237 237" width="236" height="236")
+						use(xlink:href="#ierburi" x="0" y="0")
+					h3.text-center
+						| Atelierul de ierburi
+					p
+						| Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane !
+					a.lead(href="" title="")
+						| Vezi pagina de curs
+				.col-xs-12.col-md-4.text-center
+					svg(viewBox="0 0 237 237" width="236" height="236")
+						use(xlink:href="#lumea" x="0" y="0")
+					h3.text-center
+						| Descopera lumea
+					p
+						| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor, invatand sa
+					a.lead(href="" title="")
+						| Vezi pagina de curs
+				.col-xs-12.text-center
+					a.btn.btn-lg.btn-ghost-type_one
+						| Vezi alte cursuri
