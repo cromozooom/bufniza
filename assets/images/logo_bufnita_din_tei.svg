@@ -1,3 +1,4 @@
+<symbol id="logo">
 	<text transform="matrix(1 0 0 1 187.1919 62.7202)" fill="#414042" font-family="'Montserrat-Regular'" font-size="19.0323">descopera lumea</text>
 	<text transform="matrix(1 0 0 1 186.2866 39.7115)" fill="#ffffff" font-family="'Montserrat-Bold'" font-size="29.9079">BUFNITA DIN TEI</text>
 	<path id="hand_1_" fill="#0C6E63" d="M160.965,25.855c-1.314-2.276-4.223-3.054-6.5-1.742l-25.789,14.889l0,0
@@ -44,3 +45,4 @@
 	<circle id="pupils" cx="56.585" cy="50.308" r="5.438"/>
 	<path id="ciocRight" fill="#FED208" d="M80.738,80c0,0,6.953-16.965,0-21.111c-7.49,0-14.543,5.118-14.543,5.118L80.738,80z"/>
 	<path id="ciocLeft" fill="#F1B147" d="M80.865,80c0,0-6.953-16.965,0-21.111c7.49,0,14.543,5.118,14.543,5.118L80.865,80z"/>
+</symbol>

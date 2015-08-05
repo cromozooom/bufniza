@@ -1,23 +1,53 @@
+@import "../../_customVariables.scss"
 
-.btn.ghost
-	background: transparent
-	color: $brand-primary
-	border: 2px solid $brand-primary
-	font-weight: bold
-	// CSS Transition
-	-webkit-transition: background .3s ease-in-out, border .3s ease-in-out
-	-moz-transition: background .3s ease-in-out, border .3s ease-in-out
-	-ms-transition: background .3s ease-in-out, border .3s ease-in-out
-	-o-transition: background .3s ease-in-out, border .3s ease-in-out
-	transition: background .3s ease-in-out, border .3s ease-in-out
+//- MIXIN //
+//- /////////////////////////////////////////////////////////////////////////////////////////////
+// Button Ghost
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
 
-.ghost:hover, .ghost:active
-	color: lighten(complement($brand-primary), 80%)
-	background: $brand-primary
-	border: 2px solid $brand-primary
+@mixin button-variant-ghost($color, $hoverColor, $radius)
+	border-radius: $radius
+	border: 2px solid
+	color: $color
+	background-color: transparent
+	border-color: $color
+	&:hover,
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle
+		color: lighten($hoverColor, 50%)
+		background-color: $hoverColor
+		border-color: $hoverColor
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle
+		background-image: none
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] &
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active
+			background-color: $hoverColor
+			border-color: $hoverColor
+	.badge
+		color: $color
+		background-color: $color
 
 
-.ghost
-	-webkit-border-radius: 0
-	-moz-border-radius: 0
-	border-radius: 0
+//- CSS //
+//- /////////////////////////////////////////////////////////////////////////////////////////////
+// sample code for mixin
+
+$btn-ghost-color-default: lighten(#90d177, 0%)
+$btn-ghost-color-hover-default: #90d177
+$btn-ghost-radius-default: 0px
+
+.btn-ghost-default
+	@include button-variant-ghost($btn-ghost-color-default, $btn-ghost-color-hover-default, $btn-ghost-radius-default)

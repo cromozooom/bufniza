@@ -37,6 +37,9 @@ html(lang='en')
 			link(href="#{googleFonts01}" rel="stylesheet" type="text/css")
 
 	body(class="#{namepage}")
+		svg(style="display: none;")
+			include ../assets/images/logo_bufnita_din_tei.svg
+			include ../assets/images/iconCours.svg
 
 		block header
 			if yamm == true
@@ -52,11 +55,11 @@ html(lang='en')
 								span.icon-bar
 								span.icon-bar
 							a.navbar-brand(href='#')
-								//- `<use>` shape defined ON THIS PAGE somewhere else -->
-								svg(style="display: none;")
-									symbol(id="logo")
-										include ../assets/images/logo_bufnita_din_tei.svg
-								svg(viewBox="0 0 445 80" width="332" height="60")
+								svg.hidden-xs.hidden-sm.hidden-md(viewBox="0 0 445 80" width="332" height="60")
+									use(xlink:href="#logo" x="0" y="0")
+								svg.hidden-xs.hidden-sm.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
+									use(xlink:href="#logo" x="0" y="0")
+								svg.hidden-xs.hidden-md.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
 									use(xlink:href="#logo" x="0" y="0")
 
 
@@ -67,7 +70,7 @@ html(lang='en')
 								li
 									a(href='#about') CURSURI
 								li
-									a(href='#contact') DESPRENOI
+									a(href='#contact') DESPRE NOI
 								li
 									a(href='#contact') NEWS
 								li
@@ -89,47 +92,48 @@ html(lang='en')
 						// /.nav-collapse
 		block content
 
-		block footer
-			hr
-			section.footer
+		//
+			block footer
+				hr
+				section.footer
 
-				.container
-					.row
-						.col-xs-12.hidden-md.hidden-sm.hidden-lg.text-center
-							h3 Newsletter
-							p Promotions and more details about my activity
-							hr
-							a.btn_ghost.btn-lg_ghost.btn-brand_ghost(href="#{mailListLink}" title="Join my mailing list") Join my mailing list
-
-						//- social
-						.col-sm-4.col-md-4.col-xs-12.text-center
-							h3 I am social
-							p
-								| These are some places where you can find me.
+					.container
+						.row
+							.col-xs-12.hidden-md.hidden-sm.hidden-lg.text-center
+								h3 Newsletter
+								p Promotions and more details about my activity
 								hr
-							include ../include/icon_social
-						.col-sm-4.col-md-4.col-xs-12.text-center
-							h3 Contact me
-							p Don"t hesitate to get in touch with me
+								a.btn_ghost.btn-lg_ghost.btn-brand_ghost(href="#{mailListLink}" title="Join my mailing list") Join my mailing list
+
+							//- social
+							.col-sm-4.col-md-4.col-xs-12.text-center
+								h3 I am social
+								p
+									| These are some places where you can find me.
+									hr
+								include ../include/icon_social
+							.col-sm-4.col-md-4.col-xs-12.text-center
+								h3 Contact me
+								p Don"t hesitate to get in touch with me
+								hr
+								p
+									| mobile: 
+									a(href="tel:348-555-07-61") +348 555 07 61
+									br
+									br
+									//- |  &nbsp;&nbsp;|&nbsp;&nbsp;
+									| or 
+									a(href="#{contactPage}") via e-mail
+							.col-sm-4.col-md-4.hidden-xs.text-center
+								h3 Newsletter
+								p Promotions and more details about my activity
+								hr
+								a.btn_ghost.btn-lg_ghost.btn-brand_ghost(href="#{mailListLink}") Join my mailing list
+						.row
 							hr
-							p
-								| mobile: 
-								a(href="tel:348-555-07-61") +348 555 07 61
-								br
-								br
-								//- |  &nbsp;&nbsp;|&nbsp;&nbsp;
-								| or 
-								a(href="#{contactPage}") via e-mail
-						.col-sm-4.col-md-4.hidden-xs.text-center
-							h3 Newsletter
-							p Promotions and more details about my activity
-							hr
-							a.btn_ghost.btn-lg_ghost.btn-brand_ghost(href="#{mailListLink}") Join my mailing list
-					.row
-						hr
-						.col-xs-12.text-center
-						p.text-center
-							small #{copyRight} #{projectTilte}
+							.col-xs-12.text-center
+							p.text-center
+								small #{copyRight} #{projectTilte}
 
 
 		block endScript

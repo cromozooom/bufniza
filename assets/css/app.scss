@@ -2,14 +2,16 @@
 @import "sass/_bootstrap";
 
 // my sass
-
+@import "mysass/modules/ghost/ghost";
 @import "mysass/section";
+
 @import "mysass/header";
 @import "mysass/modules/yamm/yamm";
 @import "mysass/typography";
 @import "mysass/carousel";
 
-@import "mysass/modules/ghost/ghost";
+
+@import "mysass/modules/noGutter/noGutter";
 @import "mysass/modules/social/social_Icon";
 
 
