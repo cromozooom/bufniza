@@ -55,9 +55,9 @@ html(lang='en')
 								span.icon-bar
 								span.icon-bar
 							a.navbar-brand(href='#')
-								svg.hidden-sm.hidden-md(viewBox="0 0 445 80" width="332" height="60")
+								svg.hidden-xs.hidden-sm.hidden-md(viewBox="0 0 445 80" width="332" height="60")
 									use(xlink:href="#logo" x="0" y="0")
-								svg.hidden-xs.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
+								svg.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
 									use(xlink:href="#logo" x="0" y="0")
 								//
 									svg.hidden-md.hidden-sm.hidden-lg(viewBox="0 0 445 80" width="332" height="60")
@@ -81,7 +81,8 @@ html(lang='en')
 								.input-group
 									input.form-control(type="text" placeholder="cauta...")
 									span.input-group-btn
-										button.btn.btn-default(type="button") Go!
+										button.btn.btn-default(type="button")
+											span.glyphicon.glyphicon-search
 
 							//
 								form.navbar-form.navbar-right(role="search")

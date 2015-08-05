@@ -330,8 +330,8 @@ th {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("../../../fonts/bootstrap/glyphicons-halflings-regular.eot");
-  src: url("../../../fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../../fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../../fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../../fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../../fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
+  src: url("../../assets/fonts/bootstrap/glyphicons-halflings-regular.eot");
+  src: url("../../assets/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/bootstrap/glyphicons-halflings-regular.woff2") format("woff2"), url("../../assets/fonts/bootstrap/glyphicons-halflings-regular.woff") format("woff"), url("../../assets/fonts/bootstrap/glyphicons-halflings-regular.ttf") format("truetype"), url("../../assets/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg");
 }
 
 .glyphicon {
@@ -8332,6 +8332,10 @@ fieldset[disabled] .btn-ghost-type_two.active {
 
 .navbar-inverse .navbar-nav > li > a {
   color: #333333;
+}
+
+.navbar a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .yamm .nav, .yamm .collapse, .yamm .dropup, .yamm .dropdown {
