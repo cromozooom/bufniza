@@ -8328,10 +8328,15 @@ section.cours .cover {
 
 section.cours .table-price {
   margin-top: 2em;
+  margin-bottom: 0;
 }
 
 section.cours .table-price .title td {
   border-top: 0px solid white;
+}
+
+section.cours .table-price .price small {
+  font-size: .5em;
 }
 
 section.cours .well {

@@ -96,33 +96,48 @@ block content
 						a.btn.btn-lg.btn-ghost-type_two(href="#")
 							| Inscrie-te acum
 						table.table.table-price
-							tr.title
-								td(colspan="3")
-									em preturile acestui curs
-							tr
-								td
-									h4 small
-										br
-										small 4-7 ani
-								td
-									h4 medium
-										br
-										small 8-12 ani
-								td
-									h4 large
-										br
-										small 12-14 ani
-							tr
-								td
-									p.price 120
-										span.curency €
-								td
-									p.price 130
-										span.curency €
-								td
-									p.price 140
-										span.curency €
-					.virsta
+							thead
+								tr.title
+									td(colspan="3")
+										em preturile acestui curs
+								tr
+									td
+										.a
+											include assets/images/children_size.svg
+										//-h4 small
+											br
+											small 4-7 ani
+									td
+										.b
+											include assets/images/children_size.svg
+										//-h4 medium
+											br
+											small 8-12 ani
+									td
+										.d
+											include assets/images/children_size.svg
+										//-h4 large
+											br
+											small 12-14 ani
+							tbody
+								tr
+									td
+										p.price 120
+											span.curency €
+									td
+										p.price 140
+											span.curency €
+									td
+										p.price
+											small
+												| indisponibil
+							tfoot
+								tr
+									td(colspan="3")
+										em Categorii de virsta 
+											a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
+					//-
+						.virsta
 						.pull-left
 							h5 
 								| Categorii de virsta 
