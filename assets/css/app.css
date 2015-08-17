@@ -8322,6 +8322,35 @@ fieldset[disabled] .btn-ghost-type_two.active {
   background-color: #90d177;
 }
 
+section.cours .cover {
+  background: white;
+}
+
+section.cours .table-price {
+  margin-top: 2em;
+}
+
+section.cours .table-price .title td {
+  border-top: 0px solid white;
+}
+
+section.cours .well {
+  border: none;
+  border-radius: 0px;
+}
+
+section.cours .well .price {
+  font-size: 1.5em;
+}
+
+.description .img-responsive {
+  margin: 1.4em 0;
+}
+
+.description .lead {
+  margin-bottom: 1.5em;
+}
+
 .cover {
   background: #bee6f3;
 }
