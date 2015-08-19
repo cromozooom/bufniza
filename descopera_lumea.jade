@@ -7,51 +7,54 @@ block content
 				.col-xs-12
 					a(href="#tags")
 						| Stiinte
-					h1 Descopera lumea
-				.col-xs-12.col-md-8.col-lg-7
+					h1 Descopera lumea ...
+				.col-xs-12.col-md-8.col-lg-8
 					.description
 						p.lead
 							| Cursurile CISCO IT Essentials
 							| IT Essentials PC Hardware and Software si IT Essentials 2 Network Operating Systems. Asadar vom descrie 
 						.visible-xs-block.visible-sm-block
-							.virsta
-								.pull-left
-									h5 
-										| Categorii de virsta 
-										a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
-								.pull-right.a.b
-									include assets/images/children_size.svg
-							.clearfix
 							.well.text-center
 								a.btn.btn-lg.btn-ghost-type_two(href="#")
 									| Inscrie-te acum
 								table.table.table-price
-									tr.title
-										td(colspan="3")
-											em preturile acestui curs
-									tr
-										td
-											h4 small
-												br
-												small 4-7 ani
-										td
-											h4 medium
-												br
-												small 8-12 ani
-										td
-											h4 large
-												br
-												small 12-14 ani
-									tr
-										td
-											p.price 120
-												span.curency €
-										td
-											p.price 130
-												span.curency €
-										td
-											p.price 140
-												span.curency €
+									thead
+										tr.title
+											td(colspan="3")
+												em
+													| Preturile / categorii de virsta 
+													a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
+										tr
+											td
+												.a
+													include assets/images/children_size.svg
+												//-h4 small
+													br
+													small 4-7 ani
+											td
+												.b
+													include assets/images/children_size.svg
+												//-h4 medium
+													br
+													small 8-12 ani
+											td
+												.d
+													include assets/images/children_size.svg
+												//-h4 large
+													br
+													small 12-14 ani
+									tbody
+										tr
+											td
+												p.price 120
+													span.curency €
+											td
+												p.price 140
+													span.curency €
+											td
+												p.price
+													small
+														| indisponibil
 						img.img-responsive(src="assets/images/cover_course_01.jpg" alt="...")
 						p
 							| Cursurile CISCO IT Essentials
@@ -91,62 +94,63 @@ block content
 							| cIT Essentials este un curs dezvoltat de compania Cisco Systems ce are ca scop prezentarea in amanunt a tuturor elementelor de baza ce compun un sistem electronic, facandu-se in principal referire la bine cunoscutele PC-uri.
 
 
-				.col-xs-12.col-md-4.col-lg-5
-					.well.text-center
-						a.btn.btn-lg.btn-ghost-type_two(href="#")
-							| Inscrie-te acum
-						table.table.table-price
-							thead
-								tr.title
-									td(colspan="3")
-										em
-											| Preturile / categorii de virsta 
-											a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
-								tr
-									td
-										.a
-											include assets/images/children_size.svg
-										//-h4 small
-											br
-											small 4-7 ani
-									td
-										.b
-											include assets/images/children_size.svg
-										//-h4 medium
-											br
-											small 8-12 ani
-									td
-										.d
-											include assets/images/children_size.svg
-										//-h4 large
-											br
-											small 12-14 ani
-							tbody
-								tr
-									td
-										p.price 120
-											span.curency €
-									td
-										p.price 140
-											span.curency €
-									td
-										p.price
-											small
-												| indisponibil
-							//-
-								tfoot
-								tr
-									td(colspan="3")
-										em Categorii de virsta 
-											a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
-					//-
-						.virsta
-						.pull-left
-							h5 
-								| Categorii de virsta 
-								a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
-						.pull-right.a.b
-							include assets/images/children_size.svg
+				.col-xs-12.col-md-4.col-lg-4.sidebar
+					.visible-md-block.visible-lg-block
+						.well.text-center
+							a.btn.btn-lg.btn-ghost-type_two(href="#")
+								| Inscrie-te acum
+							table.table.table-price
+								thead
+									tr.title
+										td(colspan="3")
+											em
+												| Preturile / categorii de virsta 
+												a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
+									tr
+										td
+											.a
+												include assets/images/children_size.svg
+											//-h4 small
+												br
+												small 4-7 ani
+										td
+											.b
+												include assets/images/children_size.svg
+											//-h4 medium
+												br
+												small 8-12 ani
+										td
+											.d
+												include assets/images/children_size.svg
+											//-h4 large
+												br
+												small 12-14 ani
+								tbody
+									tr
+										td
+											p.price 120
+												span.curency €
+										td
+											p.price 140
+												span.curency €
+										td
+											p.price
+												small
+													| indisponibil
+								//-
+									tfoot
+									tr
+										td(colspan="3")
+											em Categorii de virsta 
+												a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
+						//-
+							.virsta
+							.pull-left
+								h5 
+									| Categorii de virsta 
+									a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
+							.pull-right.a.b
+								include assets/images/children_size.svg
 					.clearfix
 					.timeFrame
 						h5 Time frame
@@ -168,6 +172,33 @@ block content
 								a(href="#tags") limbi straine
 							li
 								a(href="#tags") stiinta
+					.clearfix
+					.profesori
+						h5 Profesor (i)
+						hr
+						.profesor
+							.col-xs-4
+								a.text-center(href="#profesor")
+									img.img-responsive.img-circle(src="assets/images/profDefault.jpg")
+							.col-xs-12
+								h5
+									small despre 
+									a(href="#profesor") Batman Forever
+								p
+									| Profesorul Kelp Julius este tocilar, bâlbâit și fără curaj, de asemenea suferă de miopie avansată. Dar toate se schimbă când expertul în chimie Kelp Julius inventează o poțiune care-l transformă într-un tip sexy pe nume Buddy Love care atrage toate femeile. Din păcate, există și un efect secundar: Buddy nu poate controla perioada care-i rămâne până când se transformă înapoi în Julius, acesta fiind un eveniment care se întâmplă întotdeauna în momentele cele mai nepotrivite.
+						.clearfix
+						hr
+						.profesor
+							.col-xs-4
+								a.text-center(href="#profesor")
+									img.img-responsive.img-circle(src="assets/images/profDefault.jpg")
+							.col-xs-12
+								h5
+									small despre 
+									a(href="#profesor") Batman Forever
+								p
+									| Profesorul Kelp Julius este tocilar, bâlbâit și fără curaj, de asemenea suferă de miopie avansată. Dar toate se schimbă când expertul în chimie Kelp Julius inventează o poțiune care-l transformă într-un tip sexy pe nume Buddy Love care atrage toate femeile. Din păcate, există și un efect secundar: Buddy nu poate controla perioada care-i rămâne până când se transformă înapoi în Julius, acesta fiind un eveniment care se întâmplă întotdeauna în momentele cele mai nepotrivite.
+
 	#categoriiVarsta.modal.fade
 		.modal-dialog
 			.modal-content

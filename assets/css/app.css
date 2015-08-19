@@ -8181,6 +8181,10 @@ section.team a.btn {
   margin-top: 3em;
 }
 
+section.team img.img-circle {
+  margin: 0 auto;
+}
+
 @media (max-width: 767px) {
   section.team img.img-circle {
     margin-top: 6em;
@@ -8354,6 +8358,14 @@ section.cours .well .price {
 
 .description .lead {
   margin-bottom: 1.5em;
+}
+
+.sidebar hr {
+  border-top: 3px solid #e6e6e6;
+}
+
+.sidebar .profesor p {
+  font-size: .9em;
 }
 
 .cover {
