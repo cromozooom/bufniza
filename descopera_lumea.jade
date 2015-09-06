@@ -8,7 +8,7 @@ block content
 					// categorie principala
 					a(href="cursuri.html")
 						| Stiinte
-					// title Post
+					// title cours
 					h1 Descopera lumea ...
 				.col-xs-12.col-md-8.col-lg-7
 					.description
@@ -37,6 +37,7 @@ block content
 							hr
 							| Partea computer fundamentals este alcatuita din 10 capitole ce descriu functionalitatea unui computer de la modul de alimentare si constructia propriu-zisa a acestuia pana la integrarea sa intr-o retea de sisteme. In principal cursul face generalizare la toate tipurile de sisteme informatice, facand referire atat la functionalitatea acestuia din punct de vedere hardware cat si din punct de vedere software. Partea de concepte elementare se finalizeaza cu un modul in care cursantul este invatat sa comunice cu un client pentru a ii putea rezolva acestuia o problema in cel mai scurt timp si cat mai eficient (capitolul Communication Skills).
 						hr
+						// gallery
 						.gallery.row
 							.col-xs-6.col-md-3.col-lg-4
 								a.thumbnail(href="#")
@@ -68,7 +69,7 @@ block content
 					.clearfix
 					// Timeframe
 					.timeFrame
-						h5 Time frame
+						h3 Time frame
 						ul
 							li
 								p 6 zile pentru cei 
@@ -82,20 +83,22 @@ block content
 					.clearfix
 					// Tags
 					.tags
-						h5 Tags
+						h3 Tags
+						hr
 						ul.list-inline
 							li
-								a(href="cursuri.html") limbi straine
+								a(href="cursuri.html")
+									span.badge Limbi straine
 							li
-								a(href="cursuri.html") stiinta
+								a(href="cursuri.html")
+									span.badge Stiinta
 					.clearfix
 					// profesori sau profesor
 					.profesori
-						h5 Profesor (i)
+						h3 Profesor (i)
 						.clearfix
 						block profesori
 							- view = "profDetailSidebar"
-							include views/profesor
 							include views/profesor
 							include views/profesor
 	// popUP categorii de virsta ?

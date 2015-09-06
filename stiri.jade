@@ -1,16 +1,27 @@
 extends views/layout
 
 block content
-	section.cours
+	section.stiri
+		.container-fluid
+			.col-xs-12
+				// title Post
+				h1.text-center
+					| Stiri Bufnita din Tei
+					br
+					small Descopera ultimele noutati din cuibul meu ...
 		.container
 			.row
-				.col-xs-12
-					// categorie principala
-					a(href="cursuri.html")
-						| Stiinte
+						
+
 				.col-xs-12.col-md-8.col-lg-8
-					// title Post
-					h1 Descopera lumea ...
+					ul
+						li
+							// title news
+							h2 Azi am mai racolat un profesor
+							p
+								| Cursurile CISCO IT Essentials
+								| IT Essentials PC Hardware and Software si IT Essentials 2 Network Operating Systems. Asadar vom descrie 
+
 					.description
 						// excerpt
 						p.lead

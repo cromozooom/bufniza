@@ -8368,6 +8368,13 @@ section.cours .well .price {
   font-size: .9em;
 }
 
+.tags .badge {
+  font-size: 1em;
+  margin-top: .5em;
+  padding: .5em;
+  background: yellowgreen;
+}
+
 .cover {
   background: #bee6f3;
 }
@@ -8616,4 +8623,18 @@ section.carousel {
 
 .fb svg, .instagram svg, .thumblr svg, .pinterest svg, .twitter svg {
   width: 50px;
+}
+
+section.stiri {
+  padding-top: 0px;
+}
+
+section.stiri .container-fluid {
+  background: #daf1f8;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+section.stiri .container-fluid h1 {
+  color: #31b0d5;
 }
