@@ -8639,6 +8639,14 @@ section.stiri .container-fluid h1 {
   color: #31b0d5;
 }
 
+section.stiri .posts {
+  padding: 0;
+}
+
+section.stiri .posts li {
+  list-style: none;
+}
+
 section.form {
   padding-top: 0px;
 }

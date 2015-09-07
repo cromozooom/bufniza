@@ -14,65 +14,58 @@ block content
 						
 
 				.col-xs-12.col-md-8.col-lg-8
-					ul
+					mixin newsItemList(data, title, excerpt, content, link)
 						li
-							// title news
-							h2 Azi am mai racolat un profesor
-							p
-								| Cursurile CISCO IT Essentials
-								| IT Essentials PC Hardware and Software si IT Essentials 2 Network Operating Systems. Asadar vom descrie 
+							.col-xs-12
+								small= data
+								// title news
+								a(href="#{link}")
+									h4= title
+								p= excerpt
+							
+							.col-xs-12.col-sm-6
+									block
 
-					.description
-						// excerpt
-						p.lead
-							| Cursurile CISCO IT Essentials
-							| IT Essentials PC Hardware and Software si IT Essentials 2 Network Operating Systems. Asadar vom descrie 
-						
-						.visible-xs-block.visible-sm-block
-							// ADD all courses
-							include include/addAllCourses
-
-						// WYSIWYG
-						img.img-responsive(src="assets/images/cover_course_01.jpg" alt="...")
-						p
-							| Cursurile CISCO IT Essentials
-							| IT Essentials PC Hardware and Software si IT Essentials 2 Network Operating Systems. Asadar vom descrie aceste cursuri separat deoarece sunt doua cursuri separate. Subliniem inca de la inceput ca IT Essentials 2 nu este dependent de IT Essentials.
-							| IT Essentials PC Hardware and Software
-							| cIT Essentials este un curs dezvoltat de compania Cisco Systems ce are ca scop prezentarea in amanunt a tuturor elementelor de baza ce compun un sistem electronic, facandu-se in principal referire la bine cunoscutele PC-uri.
+							.col-xs-12.col-sm-6
+								p.small
+									| !{content}
+								a.btn.btn-sm.btn-ghost-type_two.pull-right(href="formular.html")
+									| read more
+							.clearfix
 							hr
-							strong
-								| Cursul este cuprins din doua parti:
-							ul
-								li computer fundamentals
-								li computer advanced
-							hr
-							| Partea computer fundamentals este alcatuita din 10 capitole ce descriu functionalitatea unui computer de la modul de alimentare si constructia propriu-zisa a acestuia pana la integrarea sa intr-o retea de sisteme. In principal cursul face generalizare la toate tipurile de sisteme informatice, facand referire atat la functionalitatea acestuia din punct de vedere hardware cat si din punct de vedere software. Partea de concepte elementare se finalizeaza cu un modul in care cursantul este invatat sa comunice cu un client pentru a ii putea rezolva acestuia o problema in cel mai scurt timp si cat mai eficient (capitolul Communication Skills).
-						hr
-						// gallery
-						.gallery.row
-							.col-xs-6.col-md-3.col-lg-4
-								a.thumbnail(href="#")
-									img(src="assets/images/imageCourseAction01.png" alt="...")
-							.col-xs-6.col-md-3.col-lg-4
-								a.thumbnail(href="#")
-									img(src="assets/images/imageCourseAction02.png" alt="...")
-							.col-xs-6.col-md-3.col-lg-4
-								a.thumbnail(href="#")
-									img(src="assets/images/imageCourseAction01.png" alt="...")
-							.col-xs-6.col-md-3.col-lg-4
-								a.thumbnail(href="#")
-									img(src="assets/images/imageCourseAction02.png" alt="...")
-							.col-xs-6.col-md-3.col-lg-4
-								a.thumbnail(href="#")
-									img(src="assets/images/imageCourseAction01.png" alt="...")
-						hr
-						p
-							| Cursurile CISCO IT Essentials
-							| IT Essentials PC Hardware and Software si IT Essentials 2 Network Operating Systems. Asadar vom descrie aceste cursuri separat deoarece sunt doua cursuri separate. Subliniem inca de la inceput ca IT Essentials 2 nu este dependent de IT Essentials.
-							| IT Essentials PC Hardware and Software
-							| cIT Essentials este un curs dezvoltat de compania Cisco Systems ce are ca scop prezentarea in amanunt a tuturor elementelor de baza ce compun un sistem electronic, facandu-se in principal referire la bine cunoscutele PC-uri.
+					ul.posts
+						+newsItemList( "23.05.15", "Azi am mai racolat un profesor", "Cursurile CISCO IT Essentials", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "http://www.solopx.com")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.06.15", "Ieri am iesit in parc", "Cursantii indiferent dse virsta au fost exctrem de multumiti", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "http://www.solopx.com")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.05.15", "Azi am mai racolat un profesor", "Cursurile CISCO IT Essentials", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "http://www.solopx.com")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.06.15", "Ieri am iesit in parc", "Cursantii indiferent dse virsta au fost exctrem de multumiti", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "http://www.solopx.com")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.05.15", "Azi am mai racolat un profesor", "Cursurile CISCO IT Essentials", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "http://www.solopx.com")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.06.15", "Ieri am iesit in parc", "Cursantii indiferent dse virsta au fost exctrem de multumiti", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "http://www.solopx.com")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
 
+					.clearfix
+					nav
+						mixin pagiation(page, link, classActive)
+							li(class="#{classActive}"): a(href="#{link}")= page
+						ul.pagination
+							li
+								a(href="#" aria-label="Previous")
+									span(aria-hidden="true") &laquo;
+							+pagiation(1, "#page1", "active")
+							+pagiation(2, "#page2", "")
+							+pagiation(3, "#page3", "")
+							+pagiation(4, "#page4", "")
+							+pagiation(5, "#page5", "")
+							+pagiation(6, "#page6", "")
 
+							li
+								a(href="#" aria-label="Next")
+									span(aria-hidden="true") &raquo;
+ 
 				.col-xs-12.col-md-4.col-lg-4.sidebar
 					// ADD all courses
 					include include/addAllCourses
