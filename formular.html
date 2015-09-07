@@ -227,7 +227,7 @@
             <li class="active"><a href="index.html">HOME</a></li>
             <li><a href="cursuri.html">CURSURI</a></li>
             <li><a href="#contact">DESPRE NOI</a></li>
-            <li><a href="#contact">NEWS</a></li>
+            <li><a href="stiri.html">NEWS</a></li>
             <li><a href="#contact">CONTACT</a></li>
           </ul>
           <div class="col-xs-12 navbar-form">
@@ -261,28 +261,28 @@
             <form>
               <div class="row">
                 <div class="col-xs-12">
-                  <h3>Datele dumencvostra</h3>
+                  <h3 class="text-center">Datele dumnevostra</h3>
                 </div>
                 <div class="col-xs-12">
-                  <div class="form-group">
+                  <div class="form-group has-success">
                     <label for="Numele">Numele dumenvoastra</label>
-                    <input type="input" id="Numele" placeholder="numele complet va rugam" class="form-control">
+                    <input type="input" placeholder="numele complet va rugam" class="form-control Numele input-lg">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                  <div class="form-group">
+                  <div class="form-group has-warning">
                     <label for="Email">Email</label>
-                    <input type="input" id="Email" placeholder="email de contact" class="form-control">
+                    <input type="input" placeholder="email de contact" class="form-control Email input-lg">
                   </div>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
                     <label for="Tel">Telefon</label>
-                    <input type="input" id="Tel" placeholder="telefon sau mobil" class="form-control">
+                    <input type="input" placeholder="telefon sau mobil" class="form-control Tel input-lg">
                   </div>
                 </div>
-                <div class="col-xs-12">
-                  <h3>Datele Copilului</h3>
+                <div class="col-xs-12 sectionPadding">
+                  <h3 class="text-center">Datele Copilului</h3>
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
@@ -305,62 +305,57 @@
                 </div>
                 <div class="col-xs-12 col-sm-6">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Categoria de virsta</label>
-                    <textarea rows="8" class="form-control"></textarea>
+                    <label for="exampleInputEmail1">Ce pasiuni are copilul dumenvoastra?</label>
+                    <textarea rows="8" placeholder="sau daca aveti alte observatii..." class="form-control"></textarea>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-12">
-                  <h3>Optiuni pentru acest curs</h3>
-                  <h5>Ce zile preferati</h5>
+                <div class="col-xs-12 sectionPadding">
+                  <h3 class="text-center"> Optiuni pentru acest curs</h3>
                 </div>
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-6 text-center">
+                  <h4>Ce zile preferati</h4>
+                  <p class="small">alegeti din optiunile disponibile</p>
                   <label class="checkbox-inline">
-                    <input id="inlineCheckboxLuni" type="checkbox" value="optionLuni">Luni
+                    <input id="inlineCheckboxLuni" type="checkbox" value="optionLuni">L
                   </label>
                   <label class="checkbox-inline">
-                    <input id="inlineCheckboxMarti" type="checkbox" value="optionMarti">Marti
+                    <input id="inlineCheckboxMarti" type="checkbox" value="optionMarti">M
                   </label>
                   <label class="checkbox-inline">
-                    <input id="inlineCheckboxMiercuri" type="checkbox" value="optionMiercuri">Miercuri
+                    <input id="inlineCheckboxMiercuri" type="checkbox" value="optionMiercuri">M
                   </label>
                   <label class="checkbox-inline">
-                    <input id="inlineCheckboxJoi" type="checkbox" value="optionJoi">Joi
+                    <input id="inlineCheckboxJoi" type="checkbox" value="optionJoi">J
                   </label>
                   <label class="checkbox-inline">
-                    <input id="inlineCheckboxVineri" type="checkbox" value="optionVineri">Vineri
+                    <input id="inlineCheckboxVineri" type="checkbox" value="optionVineri">V
                   </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxSimbata" type="checkbox" value="optionSimbata" disabled="disabled">Simbata
+                  <label disabled="disabled" class="checkbox-inline">
+                    <input id="inlineCheckboxSimbata" type="checkbox" value="optionSimbata" disabled="disabled">S
                   </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxDuminica" type="checkbox" value="optionDuminica" disabled="disabled">Duminica
-                  </label>
-                </div>
-                <div class="col-xs-12">
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxLuni" type="checkbox" value="optionLuni">Luni
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxMarti" type="checkbox" value="optionMarti">Marti
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxMiercuri" type="checkbox" value="optionMiercuri">Miercuri
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxJoi" type="checkbox" value="optionJoi">Joi
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxVineri" type="checkbox" value="optionVineri">Vineri
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxSimbata" type="checkbox" value="optionSimbata" disabled="disabled">Simbata
-                  </label>
-                  <label class="checkbox-inline">
-                    <input id="inlineCheckboxDuminica" type="checkbox" value="optionDuminica" disabled="disabled">Duminica
+                  <label disabled="disabled" class="checkbox-inline">
+                    <input id="inlineCheckboxDuminica" type="checkbox" value="optionDuminica" disabled="disabled">D
                   </label>
                 </div>
+                <div class="col-xs-12 col-sm-6 text-center">
+                  <h4>Care e orarul preferat</h4>
+                  <p class="small">alegeti din optiunile disponibile</p>
+                  <label class="checkbox-inline">
+                    <input id="inlineCheckboxProgram01" type="checkbox" value="Program01">7.00 - 10.00
+                  </label>
+                  <label disabled="disabled" class="checkbox-inline">
+                    <input id="inlineCheckboxProgram02" type="checkbox" value="Program02" disabled="disabled">10.00 - 13.00
+                  </label>
+                  <label class="checkbox-inline">
+                    <input id="inlineCheckboxProgram03" type="checkbox" value="Program03">13.00 - 16.00
+                  </label>
+                  <label disabled="disabled" class="checkbox-inline">
+                    <input id="inlineCheckboxProgram04" type="checkbox" value="Program04" disabled="disabled">16.00 - 19.00
+                  </label>
+                </div>
+                <div class="col-xs-12 text-center sectionPadding"><a href="formular.html" class="btn btn-lg btn-ghost-type_two">Inscrie-te acum</a></div>
               </div>
             </form>
           </div>

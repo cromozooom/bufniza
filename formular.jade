@@ -12,30 +12,29 @@ block content
 		.container
 			.row
 				.col-xs-12
-
 					form
 						.row
 							.col-xs-12
-								h3 Datele dumencvostra
+								h3.text-center Datele dumnevostra
 							.col-xs-12
-								.form-group
+								.form-group.has-success
 									label(for="Numele")
 										| Numele dumenvoastra
-									input(type="input" class="form-control" id="Numele" placeholder="numele complet va rugam")
+									input.form-control.Numele.input-lg(type="input" placeholder="numele complet va rugam")
 
 							.col-xs-12.col-sm-6
-								.form-group
+								.form-group.has-warning
 									label(for="Email")
 										| Email
-									input(type="input" class="form-control" id="Email" placeholder="email de contact")
+									input.form-control.Email.input-lg(type="input" placeholder="email de contact")
 
 							.col-xs-12.col-sm-6
 								.form-group
 									label(for="Tel")
 										| Telefon
-									input(type="input" class="form-control" id="Tel" placeholder="telefon sau mobil")
-							.col-xs-12
-								h3 Datele Copilului
+									input.form-control.Tel.input-lg(type="input" placeholder="telefon sau mobil")
+							.col-xs-12.sectionPadding
+								h3.text-center Datele Copilului
 							.col-xs-12.col-sm-6
 								.form-group
 									label(for="Prenumele")
@@ -57,59 +56,54 @@ block content
 							.col-xs-12.col-sm-6
 								.form-group
 									label(for="exampleInputEmail1")
-										| Categoria de virsta
-									textarea(class="form-control" rows="8")
+										| Ce pasiuni are copilul dumenvoastra?
+									textarea(class="form-control" rows="8" placeholder="sau daca aveti alte observatii...")
 						.row
-							.col-xs-12
-								h3 Optiuni pentru acest curs
-								h5 Ce zile preferati
-							.col-xs-12
+							.col-xs-12.sectionPadding
+								h3.text-center  Optiuni pentru acest curs
+							.col-xs-12.col-sm-6.text-center
+								h4 Ce zile preferati
+								p.small alegeti din optiunile disponibile
 								label.checkbox-inline
 									input#inlineCheckboxLuni(type="checkbox" value="optionLuni")
-									| Luni
+									| L
 								label.checkbox-inline
 									input#inlineCheckboxMarti(type="checkbox" value="optionMarti")
-									| Marti
+									| M
 								label.checkbox-inline
 									input#inlineCheckboxMiercuri(type="checkbox" value="optionMiercuri")
-									| Miercuri
+									| M
 								label.checkbox-inline
 									input#inlineCheckboxJoi(type="checkbox" value="optionJoi")
-									| Joi
+									| J
 								label.checkbox-inline
 									input#inlineCheckboxVineri(type="checkbox" value="optionVineri")
-									| Vineri
-								label.checkbox-inline
+									| V
+								label.checkbox-inline(disabled="disabled")
 									input#inlineCheckboxSimbata(type="checkbox" value="optionSimbata" disabled="disabled")
-									| Simbata
-								label.checkbox-inline
+									| S
+								label.checkbox-inline(disabled="disabled")
 									input#inlineCheckboxDuminica(type="checkbox" value="optionDuminica" disabled="disabled")
-									| Duminica
+									| D
 
-							.col-xs-12
+							.col-xs-12.col-sm-6.text-center
+								h4 Care e orarul preferat
+								p.small alegeti din optiunile disponibile
 								label.checkbox-inline
-									input#inlineCheckboxLuni(type="checkbox" value="optionLuni")
-									| Luni
+									input#inlineCheckboxProgram01(type="checkbox" value="Program01")
+									| 7.00 - 10.00
+								label.checkbox-inline(disabled="disabled")
+									input#inlineCheckboxProgram02(type="checkbox" value="Program02" disabled="disabled")
+									| 10.00 - 13.00
 								label.checkbox-inline
-									input#inlineCheckboxMarti(type="checkbox" value="optionMarti")
-									| Marti
-								label.checkbox-inline
-									input#inlineCheckboxMiercuri(type="checkbox" value="optionMiercuri")
-									| Miercuri
-								label.checkbox-inline
-									input#inlineCheckboxJoi(type="checkbox" value="optionJoi")
-									| Joi
-								label.checkbox-inline
-									input#inlineCheckboxVineri(type="checkbox" value="optionVineri")
-									| Vineri
-								label.checkbox-inline
-									input#inlineCheckboxSimbata(type="checkbox" value="optionSimbata" disabled="disabled")
-									| Simbata
-								label.checkbox-inline
-									input#inlineCheckboxDuminica(type="checkbox" value="optionDuminica" disabled="disabled")
-									| Duminica
-
-
+									input#inlineCheckboxProgram03(type="checkbox" value="Program03")
+									| 13.00 - 16.00
+								label.checkbox-inline(disabled="disabled")
+									input#inlineCheckboxProgram04(type="checkbox" value="Program04" disabled="disabled")
+									| 16.00 - 19.00
+							.col-xs-12.text-center.sectionPadding
+								a.btn.btn-lg.btn-ghost-type_two(href="formular.html")
+									| Inscrie-te acum
 
 
 
