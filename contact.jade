@@ -1,0 +1,45 @@
+extends views/layout
+
+block content
+	section.form
+		.container-fluid
+			.col-xs-12
+				// title Post
+				h1.text-center
+					| Formular contact
+					br
+					small vom incerca sa va raspundem cit mai promt la sugestii
+		.container
+			.row
+				.col-xs-12
+					form
+						.row
+							.col-xs-12.col-sm-6
+								.form-group
+									label(for="Numele")
+										| Numele dumenvoastra
+									input(type="input" class="form-control" id="Numele" placeholder="numele complet va rugam")
+								.form-group
+									label(for="email de contact")
+										| Email
+									input(type="input" class="form-control" id="email" placeholder="email de contact")
+								.form-group
+									label(for="telefon")
+										| Telefon
+									input(type="input" class="form-control" id="telefon" placeholder="telefon sau mobil")
+								
+
+							.col-xs-12.col-sm-6
+								.form-group
+									label(for="exampleInputEmail1")
+										| Mesajul dumnevoastra
+									textarea(class="form-control" rows="8" placeholder="sau daca aveti alte observatii...")
+							.col-xs-12.text-center.sectionPadding
+								a.btn.btn-lg.btn-ghost-type_two(href="formular.html")
+									| Trimite mesajul
+							.col-xs-12.text-center.sectionPadding
+								p va lumtumim pentru ca ne-ati contactat							
+
+
+
+	
