@@ -1,36 +1,85 @@
+mixin cursHomePage(firstLast, svgID, titleCourse, excerpt, CTA, ctaLink)
+	.col-xs-12.col-md-4.text-center(class="firstLast")
+		svg(viewBox="0 0 237 237" width="236" height="236")
+			use(xlink:href="#{svgID}" x="0" y="0")
+		h3.text-center
+			| !{titleCourse}
+		p
+			| !{excerpt}
+		a.lead(href="#{ctaLink}" title="#{titleCourse}")
+			| !{CTA}
+
 section.cursuri
 	.container
 		.row
 			.col-xs-12.text-center
 				h2
 					| Citeva dintre cursurile mele:
-			.col-xs-12.col-md-4.text-center.first
-				svg(viewBox="0 0 237 237" width="236" height="236")
-					use(xlink:href="#sah" x="0" y="0")
-				h3.text-center
-					| Sah mat!
-				p
-					| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...
-				a.lead(href="" title="")
-					| Vezi pagina de curs
-			.col-xs-12.col-md-4.text-center
-				svg(viewBox="0 0 237 237" width="236" height="236")
-					use(xlink:href="#ierburi" x="0" y="0")
-				h3.text-center
-					| Atelierul de ierburi
-				p
-					| Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane! ...
-				a.lead(href="" title="")
-					| Vezi pagina de curs
-			.col-xs-12.col-md-4.text-center
-				svg(viewBox="0 0 237 237" width="236" height="236")
-					use(xlink:href="#lumea" x="0" y="0")
-				h3.text-center
-					| Descopera lumea
-				p
-					| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...
-				a.lead(href="" title="")
-					| Vezi pagina de curs
+			
+			+cursHomePage("first", "#sah", "Sah mat!", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#atelierulDeIerburi", "Atelierul de ierburi", "Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane! ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#lumea", "Descopera lumea ...", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			.clearfix
+			hr
 			.col-xs-12.text-center
-				a.btn.btn-lg.btn-ghost-type_two
-					| Vezi alte cursuri
+				h2
+					| Toate cursurile
+			+cursHomePage("", "#default", "default", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#montajFilm", "Montaj Film", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#iT", "IT", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			.clearfix
+			hr
+			+cursHomePage("", "#photo", "Photo", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#jurnalism", "jurnalism", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#teatruPapusi", "teatruPapusi", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			.clearfix
+			hr
+			+cursHomePage("", "#limbiStraine", "limbiStraine", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#literaturaRomana", "Literatura Romana", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#actorieSociodrama", "Actorie Sociodrama", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			.clearfix
+			hr
+			+cursHomePage("", "#lemnHandMade", "lemnHandMade", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#iDidThis", "i Did This", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#legoKing", "Lego King", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			.clearfix
+			hr
+			+cursHomePage("", "#lego", "Lego", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#lumeaCulorilor", "Lumea Culorilor", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#sah", "Sah", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			.clearfix
+			hr
+			+cursHomePage("", "#atelierulDeIerburi", "Atelierul de ierburi", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			+cursHomePage("", "#descoperaLumea", "Descopera lumea ...", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
+			
+			//- comment
+				.col-xs-12.col-md-4.text-center.first
+					svg(viewBox="0 0 237 237" width="236" height="236")
+						use(xlink:href="#sah" x="0" y="0")
+					h3.text-center
+						| Sah mat!
+					p
+						| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...
+					a.lead(href="" title="")
+						| Vezi pagina de curs
+				.col-xs-12.col-md-4.text-center
+					svg(viewBox="0 0 237 237" width="236" height="236")
+						use(xlink:href="#ierburi" x="0" y="0")
+					h3.text-center
+						| Atelierul de ierburi
+					p
+						| Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane! ...
+					a.lead(href="" title="")
+						| Vezi pagina de curs
+				.col-xs-12.col-md-4.text-center
+					svg(viewBox="0 0 237 237" width="236" height="236")
+						use(xlink:href="#lumea" x="0" y="0")
+					h3.text-center
+						| Descopera lumea
+					p
+						| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...
+					a.lead(href="" title="")
+						| Vezi pagina de curs
+				.col-xs-12.text-center
+					a.btn.btn-lg.btn-ghost-type_two
+						| Vezi alte cursuri
