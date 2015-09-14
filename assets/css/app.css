@@ -8155,7 +8155,7 @@ section.cursuri a.lead {
   }
 }
 
-section.team {
+section.footer, section.team {
   background: url("../images/section_head_bg_02.png") repeat-x 50% 0 #30756d;
 }
 
@@ -8855,4 +8855,17 @@ section.form label.checkbox-inline input {
 
 section.form .sectionPadding {
   padding-top: 3em;
+}
+
+section.footer {
+  color: white;
+}
+
+section.footer h5, section.footer p {
+  color: white;
+}
+
+section.footer .cursuriFooter ul, section.footer .newsFooter ul {
+  list-style: none;
+  padding: 0;
 }

@@ -37,6 +37,7 @@ html(lang='en')
 			//- link(href="#{googleFonts01}" rel="stylesheet" type="text/css")
 
 	body(class="#{namepage}")
+		include ../include/facebookSDK.html
 		svg(style="display: none;")
 			include ../assets/images/logo_bufnita_din_tei.svg
 			include ../assets/images/iconCours.svg
@@ -54,7 +55,7 @@ html(lang='en')
 								span.icon-bar
 								span.icon-bar
 								span.icon-bar
-							a.navbar-brand(href='#')
+							a.navbar-brand(href='index.html')
 								svg.hidden-xs.hidden-sm.hidden-md(viewBox="0 0 445 80" width="332" height="60")
 									use(xlink:href="#logo" x="0" y="0")
 								svg.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
@@ -93,6 +94,43 @@ html(lang='en')
 
 						// /.nav-collapse
 		block content
+
+		block footer
+			mixin listItemFooter(copy, link)
+				li: a(href="#{link}") #{copy} 
+			section.footer
+				.container-fluid
+					.container
+						.row
+							.col-xs-12.col-sm-6.col-md-3.despreNoiFooter
+								h5 Despre noi
+								p.small
+									| Contrar asteptarilor, mi-am facut cuibul intr-o cladire foarte luminoasa, chiar la strada (vis-à-vis de Piata Big Berceni), cu o amenajare placuta ochiului si mintii.
+									| Si pentru ca nu sunt o bufnita oarecare, ci una care prefera umbra ramurilor de tei, vei vedea ca am obiceiuri neobisnuite; de exemplu, imi place sa filozofez pe diverse teme, sa construiesc, sa mesteresc, dar si sa ma delectez cu delicatul “parfum al teilor in floare”.
+							.col-xs-12.col-sm-6.col-md-3
+								h5 Pagina de facebook
+								<div class="fb-page" data-href="https://www.facebook.com/Bufnita-din-Tei-1609911665934551" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
+							.col-xs-12.col-sm-6.col-md-3.cursuriFooter
+								h5 Cursurile noastre
+								ul
+									+listItemFooter("Arta si creatie", "cursuri.html")
+									+listItemFooter("Limbi straine", "cursuri.html")
+									+listItemFooter("Logica", "cursuri.html")
+									+listItemFooter("Jocuri", "cursuri.html")
+									+listItemFooter("Hand made", "cursuri.html")
+									+listItemFooter("Arta si creatie", "cursuri.html")
+							.col-xs-12.col-sm-6.col-md-3.newsFooter
+								h5 Articole recente
+								ul
+									+listItemFooter("Profesorul iordache apare", "stire.html")
+									+listItemFooter("Limbi straine", "stire.html")
+									+listItemFooter("Logica", "stire.html")
+									+listItemFooter("Jocuri", "stire.html")
+									+listItemFooter("Hand made", "stire.html")
+									+listItemFooter("Arta si creatie", "stire.html")
+
+									
+
 
 		//
 			block footer

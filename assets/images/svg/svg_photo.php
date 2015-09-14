@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 236 236" enable-background="new 0 0 236 236" xml:space="preserve">
-<g id="photo">
+<symbol id="photo">
 	<circle id="circle_15_" fill="#FEEBA4" cx="118" cy="118" r="118"/>
-	<g>
-		<rect x="84.4" y="60" fill="#FFFFFF" width="112.1" height="112.1"/>
-		<rect x="92.7" y="68.3" fill="#BEE6F1" width="95.5" height="78"/>
-		<polygon fill="#009369" points="113.1,146.2 188.2,146.2 188.2,119.4 164.1,95.3 		"/>
-		<path fill="#53BAAD" d="M92.7,146.5l36.1-36.1l36.1,36.1"/>
-		<circle fill="#FDD10C" cx="115.4" cy="92.7" r="11.7"/>
-	</g>
+	<rect x="84.4" y="60" fill="#FFFFFF" width="112.1" height="112.1"/>
+	<rect x="92.7" y="68.3" fill="#BEE6F1" width="95.5" height="78"/>
+	<polygon fill="#009369" points="113.1,146.2 188.2,146.2 188.2,119.4 164.1,95.3 		"/>
+	<path fill="#53BAAD" d="M92.7,146.5l36.1-36.1l36.1,36.1"/>
+	<circle fill="#FDD10C" cx="115.4" cy="92.7" r="11.7"/>
 	<path fill="#B2A09F" d="M104.1,120.8c1.8,4.4,2.8,9.1,2.8,14.1c0,5.1-1,10-2.9,14.4L79.7,125l-0.1-0.1c-2.5-2.6-6.1-4.1-10-4.1
 		H104.1z"/>
 	<path fill="#998F8F" d="M104.1,120.8H69.6c-3.8,0-7.3,1.5-9.8,4l24.2-24.2l0-0.1C93.1,104.3,100.3,111.6,104.1,120.8z"/>
@@ -23,5 +17,4 @@
 		L59.6,144.8z"/>
 	<path fill="#FFFFFF" d="M59.7,124.8l-0.1,0.1C59.6,124.9,59.7,124.8,59.7,124.8z"/>
 	<path fill="#838384" d="M59.6,144.8l-24.1-24.1l-0.4-0.2c3.8-9.2,11.1-16.5,20.3-20.2v34.5C55.5,138.8,57.1,142.3,59.6,144.8z"/>
-</g>
-</svg>
+</symbol>
