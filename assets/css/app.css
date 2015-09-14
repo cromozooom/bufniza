@@ -8859,13 +8859,36 @@ section.form .sectionPadding {
 
 section.footer {
   color: white;
+  padding: 4em 0 0 0;
 }
 
-section.footer h5, section.footer p {
+section.footer h1, section.footer h2, section.footer h3, section.footer h4, section.footer h5, section.footer h5, section.footer p {
   color: white;
 }
 
 section.footer .cursuriFooter ul, section.footer .newsFooter ul {
   list-style: none;
   padding: 0;
+}
+
+section.footer .cursuriFooter ul li, section.footer .newsFooter ul li {
+  border-top: 1px solid #29635c;
+}
+
+section.footer .cursuriFooter ul li a, section.footer .newsFooter ul li a {
+  padding: 0.5em 0em;
+  display: block;
+}
+
+section.footer hr {
+  border-top: 5px solid #29635c;
+}
+
+section.footer .lastRowFooter {
+  background: #29635c;
+  padding: 1em 0 0.5em 0;
+}
+
+section.footer .lastRowFooter p {
+  color: #53b8ad;
 }

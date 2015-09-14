@@ -102,16 +102,9 @@ html(lang='en')
 				.container-fluid
 					.container
 						.row
-							.col-xs-12.col-sm-6.col-md-3.despreNoiFooter
-								h5 Despre noi
-								p.small
-									| Contrar asteptarilor, mi-am facut cuibul intr-o cladire foarte luminoasa, chiar la strada (vis-à-vis de Piata Big Berceni), cu o amenajare placuta ochiului si mintii.
-									| Si pentru ca nu sunt o bufnita oarecare, ci una care prefera umbra ramurilor de tei, vei vedea ca am obiceiuri neobisnuite; de exemplu, imi place sa filozofez pe diverse teme, sa construiesc, sa mesteresc, dar si sa ma delectez cu delicatul “parfum al teilor in floare”.
-							.col-xs-12.col-sm-6.col-md-3
-								h5 Pagina de facebook
-								<div class="fb-page" data-href="https://www.facebook.com/Bufnita-din-Tei-1609911665934551" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
 							.col-xs-12.col-sm-6.col-md-3.cursuriFooter
-								h5 Cursurile noastre
+								hr.visible-xs-block.visible-sm-block
+								h4 Cursurile noastre
 								ul
 									+listItemFooter("Arta si creatie", "cursuri.html")
 									+listItemFooter("Limbi straine", "cursuri.html")
@@ -120,61 +113,32 @@ html(lang='en')
 									+listItemFooter("Hand made", "cursuri.html")
 									+listItemFooter("Arta si creatie", "cursuri.html")
 							.col-xs-12.col-sm-6.col-md-3.newsFooter
-								h5 Articole recente
+								hr.visible-xs-block.visible-sm-block
+								h4 Articole recente
 								ul
 									+listItemFooter("Profesorul iordache apare", "stire.html")
-									+listItemFooter("Limbi straine", "stire.html")
-									+listItemFooter("Logica", "stire.html")
-									+listItemFooter("Jocuri", "stire.html")
+									+listItemFooter("Mergem La ZOO", "stire.html")
+									+listItemFooter("Invatza sa calaresti un pirtz vitezoman", "stire.html")
+									+listItemFooter("Oare care e cel mai bun profeso al nostru", "stire.html")
 									+listItemFooter("Hand made", "stire.html")
 									+listItemFooter("Arta si creatie", "stire.html")
-
-									
-
-
-		//
-			block footer
-				hr
-				section.footer
-
+							.col-xs-12.col-sm-6.col-md-3
+								hr.visible-xs-block.visible-sm-block
+								h4 Pagina de facebook
+								<div class="fb-page" data-href="https://www.facebook.com/Bufnita-din-Tei-1609911665934551" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
+							.col-xs-12.col-sm-6.col-md-3.despreNoiFooter
+								hr.visible-xs-block.visible-sm-block
+								h4 Despre noi
+								p.small
+									| Contrar asteptarilor, mi-am facut cuibul intr-o cladire foarte luminoasa, chiar la strada (vis-à-vis de Piata Big Berceni), cu o amenajare placuta ochiului si mintii.
+									| Si pentru ca nu sunt o bufnita oarecare, ci una care prefera umbra ramurilor de tei, vei vedea ca am obiceiuri neobisnuite; de exemplu, imi place sa filozofez pe diverse teme, sa construiesc, sa mesteresc, dar si sa ma delectez cu delicatul “parfum al teilor in floare”.
+				.container-fluid.lastRowFooter
 					.container
 						.row
-							.col-xs-12.hidden-md.hidden-sm.hidden-lg.text-center
-								h3 Newsletter
-								p Promotions and more details about my activity
-								hr
-								a.btn_ghost.btn-lg_ghost.btn-brand_ghost(href="#{mailListLink}" title="Join my mailing list") Join my mailing list
-
-							//- social
-							.col-sm-4.col-md-4.col-xs-12.text-center
-								h3 I am social
-								p
-									| These are some places where you can find me.
-									hr
-								include ../include/icon_social
-							.col-sm-4.col-md-4.col-xs-12.text-center
-								h3 Contact me
-								p Don"t hesitate to get in touch with me
-								hr
-								p
-									| mobile: 
-									a(href="tel:348-555-07-61") +348 555 07 61
-									br
-									br
-									//- |  &nbsp;&nbsp;|&nbsp;&nbsp;
-									| or 
-									a(href="#{contactPage}") via e-mail
-							.col-sm-4.col-md-4.hidden-xs.text-center
-								h3 Newsletter
-								p Promotions and more details about my activity
-								hr
-								a.btn_ghost.btn-lg_ghost.btn-brand_ghost(href="#{mailListLink}") Join my mailing list
-						.row
-							hr
-							.col-xs-12.text-center
-							p.text-center
-								small #{copyRight} #{projectTilte}
-
+							.col-xs-6
+								p.text-left Copyright Bufnita din tei 2015
+							.col-xs-6
+								p.text-right telefon: 3485550761
 
 		block endScript
 			// Bootstrap core JavaScript
