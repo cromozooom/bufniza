@@ -102,8 +102,8 @@ html(lang='en')
 				.container-fluid
 					.container
 						.row
-							.col-xs-12.col-sm-6.col-md-3.cursuriFooter
-								hr.visible-xs-block.visible-sm-block
+							.col-xs-12.col-sm-6.col-md-3.col-md-push-3.cursuriFooter
+								//- hr.visible-xs-block.visible-sm-block
 								h4 Cursurile noastre
 								ul
 									+listItemFooter("Arta si creatie", "cursuri.html")
@@ -112,7 +112,7 @@ html(lang='en')
 									+listItemFooter("Jocuri", "cursuri.html")
 									+listItemFooter("Hand made", "cursuri.html")
 									+listItemFooter("Arta si creatie", "cursuri.html")
-							.col-xs-12.col-sm-6.col-md-3.newsFooter
+							.col-xs-12.col-sm-6.col-md-3.col-md-push-3.newsFooter
 								hr.visible-xs-block.visible-sm-block
 								h4 Articole recente
 								ul
@@ -122,11 +122,11 @@ html(lang='en')
 									+listItemFooter("Oare care e cel mai bun profeso al nostru", "stire.html")
 									+listItemFooter("Hand made", "stire.html")
 									+listItemFooter("Arta si creatie", "stire.html")
-							.col-xs-12.col-sm-6.col-md-3
+							.col-xs-12.col-sm-6.col-md-3.col-md-push-3
 								hr.visible-xs-block.visible-sm-block
 								h4 Pagina de facebook
 								<div class="fb-page" data-href="https://www.facebook.com/Bufnita-din-Tei-1609911665934551" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
-							.col-xs-12.col-sm-6.col-md-3.despreNoiFooter
+							.col-xs-12.col-sm-6.col-md-3.col-md-pull-9.despreNoiFooter
 								hr.visible-xs-block.visible-sm-block
 								h4 Despre noi
 								p.small
@@ -136,9 +136,9 @@ html(lang='en')
 					.container
 						.row
 							.col-xs-6
-								p.text-left Copyright Bufnita din tei 2015
+								p.text-left.small Copyright Bufnita din tei 2015
 							.col-xs-6
-								p.text-right telefon: 3485550761
+								p.text-right.small telefon: 3485550761
 
 		block endScript
 			// Bootstrap core JavaScript
