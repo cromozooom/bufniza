@@ -31,22 +31,74 @@
 					p.oldPrice
 						del
 							| 130
-							span.curency €
+							span.curency RON
 				td
 					p.oldPrice
 						del
 							| 150
-							span.curency €
+							span.curency RON
 				td
 					p.oldPrice
 						| -
 			tr
 				td
 					p.price 120
-						span.curency €
+						span.curency RON
 				td
 					p.price 140
-						span.curency €
+						span.curency RON
+				td
+					p.price
+						small
+							| -
+
+hr
+
+table.table.table-price
+		thead
+			tr.title
+				td(colspan="3")
+					em
+						| Preturile / categorii de virsta 
+						a.badge(href="modal" data-toggle="modal" data-target="#categoriiVarsta") ?
+			tr
+				td: .a
+						include ../assets/images/children_size.svg
+					//-h4 small
+						br
+						small 4-7 ani
+				td: .b
+						include ../assets/images/children_size.svg
+					//-h4 medium
+						br
+						small 8-12 ani
+				td: .d
+						include ../assets/images/children_size.svg
+					//-h4 large
+						br
+						small 12-14 ani
+		tbody
+			tr
+				td
+					p.oldPrice
+						del
+							| 130
+							span.curency RON
+				td
+					p.oldPrice
+						del
+							| 150
+							span.curency RON
+				td
+					p.oldPrice
+						| -
+			tr
+				td
+					p.price 120
+						span.curency RON
+				td
+					p.price 140
+						span.curency RON
 				td
 					p.price
 						small
