@@ -8328,6 +8328,22 @@ section.cours .well .price {
   background: yellowgreen;
 }
 
+.ssba img {
+  width: 50px !important;
+  padding: 0px;
+  border: 0;
+  box-shadow: none !important;
+  display: inline !important;
+  vertical-align: middle;
+}
+
+.ssba, .ssba a {
+  text-decoration: none;
+  border: 0;
+  background: none;
+  font-weight: bold;
+}
+
 .cover {
   background: #bee6f3;
 }
