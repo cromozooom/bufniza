@@ -90,7 +90,7 @@ $headings-color:          inherit !default;
 // $icon-font-path: if($bootstrap-sass-asset-helper, "../../assets/fonts/bootstrap/", "../../assets/fonts/bootstrap/") !default;
 
 /// bufnitza path
-$icon-font-path: if($bootstrap-sass-asset-helper, "fonts/bootstrap/", "fonts/bootstrap/") !default;
+$icon-font-path: if($bootstrap-sass-asset-helper, "../../fonts/bootstrap/", "../../fonts/bootstrap/");
 
 
 //** File name for all font files.

@@ -1,3 +1,21 @@
+/*
+	Theme Name: bufnita
+	Theme URI: http://underscores.me/
+	Author: Underscores.me
+	Author URI: http://underscores.me/
+	Description: Description
+	Version: 1.0.0
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: bufnita
+	Tags:
+	This theme, like WordPress, is licensed under the GPL.
+	Use it to make something cool, have fun, and share what you've learned with others.
+	bufnita is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+	Underscores is distributed under the terms of the GNU GPL v2 or later.
+	Normalizing styles have been helped along thanks to the fine work of
+	Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:400;src:local('Montserrat-Regular'),url(https://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');unicode-range:U0 0FF,U131,U152 -153,U2C6,U2DA,U2DC,U2000 -206F,U2074,U20AC,U2212,U2215,UE0FF,UEFFD,UF000;}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;src:local('Montserrat-Bold'),url(https://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcmaVI6zN22yiurzcBKxPjFE.woff2) format('woff2');unicode-range:U0 0FF,U131,U152 -153,U2C6,U2DA,U2DC,U2000 -206F,U2074,U20AC,U2212,U2215,UE0FF,UEFFD,UF000;}@font-face{font-family:'Old Standard TT';font-style:normal;font-weight:400;src:local('Old Standard TT Regular'),local('OldStandardTT-Regular'),url(https://fonts.gstatic.com/s/oldstandardtt/v7/n6RTCDcIPWSE8UNBa4k-DJDiI8zI8NGcbDOKyTTsY20.woff2) format('woff2');unicode-range:U0 0FF,U131,U152 -153,U2C6,U2DA,U2DC,U2000 -206F,U2074,U20AC,U2212,U2215,UE0FF,UEFFD,UF000;}@font-face{font-family:'Old Standard TT';font-style:italic;font-weight:400;src:local('Old Standard TT Italic'),local('OldStandardTT-Italic'),url(https://fonts.gstatic.com/s/oldstandardtt/v7/QQT_AUSp4AV4dpJfIN7U5LFe6RXWndt-yIBvO8h3x9Q.woff2) format('woff2');unicode-range:U0 0FF,U131,U152 -153,U2C6,U2DA,U2DC,U2000 -206F,U2074,U20AC,U2212,U2215,UE0FF,UEFFD,UF000;}/*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
