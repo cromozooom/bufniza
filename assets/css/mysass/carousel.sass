@@ -14,17 +14,30 @@ section.carousel
 		.item
 			p
 				padding: .5em
+		.item
+			// Discount
+			$colorBgDiscount: #126f65
+			$colorBtnDiscount: #fdd209
+			background: $colorBgDiscount
+			//p
+			//	background: rgba($colorBgDiscount, .6)
+			.btn-ghost-default
+				background: $colorBtnDiscount
+				border-color: $colorBtnDiscount
+				a
+					color: lighten($colorBtnDiscount, 100%)
 		.item:nth-child(1)
 			// muzica
 			$colorBgMuzica: #91d2ca
 			$colorBtnMuzica: #f16834
 			background: $colorBgMuzica
 			p
-				background: rgba($colorBgMuzica, .8)
+				background: rgba($colorBgMuzica, .6)
 			.btn-ghost-default
 				background: $colorBtnMuzica
 				border-color: $colorBtnMuzica
-				color: lighten($colorBtnMuzica, 100%)
+				a
+					color: lighten($colorBtnMuzica, 100%)
 
 		.item:nth-child(2)
 			// Limbi Straine
@@ -32,33 +45,36 @@ section.carousel
 			$colorBtnLimbi: #ffffff
 			background: $colorBgLimbi
 			p
-				background: rgba($colorBgLimbi, .8)
+				background: rgba($colorBgLimbi, .6)
 			.btn-ghost-default
 				background: $colorBtnLimbi
 				border-color: $colorBtnLimbi
-				color: darken($colorBtnLimbi, 40%)
+				a
+					color: darken($colorBtnLimbi, 40%)
 		.item:nth-child(3)
 			// Lego
 			$colorBgLego: #14286d
 			$colorBtnLego: #ed1c22
 			background: $colorBgLego
 			p
-				background: rgba($colorBgLego, .8)
+				background: rgba($colorBgLego, .6)
 			.btn-ghost-default
 				background: $colorBtnLego
 				border-color: $colorBtnLego
-				color: lighten($colorBtnLego, 80%)
+				a
+					color: lighten($colorBtnLego, 80%)
 		.item:nth-child(4)
 			// Discount
 			$colorBgDiscount: #126f65
 			$colorBtnDiscount: #fdd209
 			background: $colorBgDiscount
 			//p
-			//	background: rgba($colorBgDiscount, .8)
+			//	background: rgba($colorBgDiscount, .6)
 			.btn-ghost-default
 				background: $colorBtnDiscount
 				border-color: $colorBtnDiscount
-				color: lighten($colorBtnDiscount, 100%)
+				a
+					color: lighten($colorBtnDiscount, 100%)
 
 		.item:nth-child(5)
 			// Descopera lumea
@@ -66,11 +82,12 @@ section.carousel
 			$colorBtnDescopera: #f1b143
 			background: $colorBgDescopera
 			p
-				background: rgba($colorBgDescopera, .8)
+				background: rgba($colorBgDescopera, .6)
 			.btn-ghost-default
 				background: $colorBtnDescopera
 				border-color: $colorBtnDescopera
-				color: lighten($colorBtnDescopera, 100%)
+				a
+					color: lighten($colorBtnDescopera, 100%)
 
 		.item:nth-child(6)
 			// Lumea culorilor
@@ -78,22 +95,26 @@ section.carousel
 			$colorBtnLumeaCulorilor: #3abfec
 			background: $colorBgLumeaCulorilor
 			p
-				background: rgba($colorBgLumeaCulorilor, .8)
+				//background: rgba($colorBgLumeaCulorilor, .6)
+				background: transparent
+				color: darken($colorBtnLumeaCulorilor, 0%)
 			.btn-ghost-default
 				background: $colorBtnLumeaCulorilor
 				border-color: $colorBtnLumeaCulorilor
-				color: lighten($colorBtnLumeaCulorilor, 100%)
+				a
+					color: lighten($colorBtnLumeaCulorilor, 100%)
 		.item:nth-child(7)
 			// actorie
 			$colorBgActorie: #83b7c5
 			$colorBtnActorie: #fdd209
 			background: $colorBgActorie
 			p
-				background: rgba($colorBgActorie, .8)
+				background: rgba($colorBgActorie, .6)
 			.btn-ghost-default
 				background: $colorBtnActorie
 				border-color: $colorBtnActorie
-				color: lighten($colorBtnActorie, 100%)
+				a
+					color: lighten($colorBtnActorie, 100%)
 
 // Extra small devices (phones, less than 768px)
 // No media query since this is the default in Bootstrap
