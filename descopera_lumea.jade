@@ -63,15 +63,7 @@ block content
 
 
 				.col-xs-12.col-md-4.col-lg-5.sidebar
-					//- we need you
-					.weneedyou.text-center
-						a(href="profesor_form.html")
-							img.img-responsive(src="assets/images/weNeedYou.jpg" alt="...")
-
-						p.lead Ai un proiect interesant?
-						a.btn.btn-lg.btn-ghost-type_two(href="profesor_form.html")
-							| contacteaza-ne rapid
-					hr
+					
 					.visible-md-block.visible-lg-block
 						// Desktop sidebar (same like in mobile)
 						include views/ctaSidebar
@@ -110,6 +102,15 @@ block content
 							- view = "profDetailSidebar"
 							include views/profesor
 							include views/profesor
+					// we need you
+					.weneedyou.text-center
+						a(href="profesor_form.html")
+							img.img-responsive(src="assets/images/weNeedYou.jpg" alt="...")
+
+						p.lead Ai un proiect interesant?
+						a.btn.btn-lg.btn-ghost-type_two(href="profesor_form.html")
+							| contacteaza-ne rapid
+					hr
 	// popUP categorii de virsta ?
 	#categoriiVarsta.modal.fade
 		.modal-dialog
@@ -135,5 +136,6 @@ block content
 				.modal-footer
 					button.btn.btn-default(type="button" data-dismiss="modal") Inchide fereastra
 					//- button.btn.btn-primary(type="button") Inchide fereastra
+	
 
 
