@@ -8084,6 +8084,7 @@ section.cursuri h2 {
 }
 
 section.cursuri h3 {
+  font-size: 1em;
   margin-bottom: 2em;
 }
 
@@ -8099,9 +8100,14 @@ section.cursuri a.lead {
   font-size: 1.2em;
 }
 
+section.cursuri svg {
+  max-width: 70%;
+}
+
 @media (max-width: 767px) {
   section.cursuri svg {
     margin-top: 6em;
+    max-width: 50%;
   }
   section.cursuri .first svg {
     margin-top: 0em;
@@ -8794,6 +8800,23 @@ section.carousel .carousel-inner .item:nth-child(7) a {
 .st40 {
   display: inline;
   fill: #FFF100;
+}
+
+#newsletterModal .modal-dialog {
+  bottom: 0px;
+  position: fixed;
+  right: 0;
+}
+
+#newsletterModal .modal-header {
+  border: none;
+}
+
+#newsletterModal .modal-content {
+  text-align: center;
+  background: url(../images/clowd.png) 50% 50% #94e0ed;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .container-fluid.no-gutter > [class*='col-'],
