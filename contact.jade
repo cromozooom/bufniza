@@ -4,41 +4,84 @@ block content
 	section.form
 		.container-fluid
 			.col-xs-12
+				p.text-center Puteti sa ne contactati telefonic la numarul: 
+					a(href="tel:0751-02-03-62") 0751.02.03.62
 				// title Post
 				h1.text-center
 					| Formular contact
 					br
 					small vom incerca sa va raspundem cit mai promt la sugestii
-		.container
+		.container.contactForm
 			.row
-				.col-xs-12
-					form
-						.row
-							.col-xs-12.col-sm-6
-								.form-group
-									label(for="Numele")
-										| Numele dumenvoastra
-									input(type="input" class="form-control" id="Numele" placeholder="numele complet va rugam")
-								.form-group
-									label(for="email de contact")
-										| Email
-									input(type="input" class="form-control" id="email" placeholder="email de contact")
-								.form-group
-									label(for="telefon")
-										| Telefon
-									input(type="input" class="form-control" id="telefon" placeholder="telefon sau mobil")
-								
+				.col-xs-12.col-md-9
+					// Nav tabs
+					ul.nav.nav-tabs(role="tablist")
+						li.active(role="presentation")
+							a(href="#contact" aria-controls="contact" role="tab" data-toggle="tab") Contact
+						li(role="presentation")
+							a(href="#profesor" aria-controls="profile" role="tab" data-toggle="tab") Profesor Contatc
+					// Tab panes
+					.tab-content
+						.tab-pane.active(role="tabpanel" class="" id="contact")
+							br
+							form
+								.row
+									.col-xs-12.col-sm-6
+										.form-group
+											label(for="Numele")
+												| Numele dumenvoastra
+											input(type="input" class="form-control" id="Numele" placeholder="numele complet va rugam")
+										.form-group
+											label(for="email de contact")
+												| Email
+											input(type="input" class="form-control" id="email" placeholder="email de contact")
+										.form-group
+											label(for="telefon")
+												| Telefon
+											input(type="input" class="form-control" id="telefon" placeholder="telefon sau mobil")
+										
 
-							.col-xs-12.col-sm-6
-								.form-group
-									label(for="exampleInputEmail1")
-										| Mesajul dumnevoastra
-									textarea(class="form-control" rows="8" placeholder="sau daca aveti alte observatii...")
-							.col-xs-12.text-center.sectionPadding
-								a.btn.btn-lg.btn-ghost-type_two(href="formular.html")
-									| Trimite mesajul
-							.col-xs-12.text-center.sectionPadding
-								p va lumtumim pentru ca ne-ati contactat							
+									.col-xs-12.col-sm-6
+										.form-group
+											label(for="exampleInputEmail1")
+												| Mesajul dumnevoastra
+											textarea(class="form-control" rows="8" placeholder="sau daca aveti alte observatii...")
+									.col-xs-12.text-center.sectionPadding
+										a.btn.btn-lg.btn-ghost-type_two(href="formular.html")
+											| Trimite mesajul
+									.col-xs-12.text-center.sectionPadding
+										p va lumtumim pentru ca ne-ati contactat
+						.tab-pane#profesor(role="tabpanel")
+							br
+							form
+								.row
+									.col-xs-12.col-sm-6
+										.form-group
+											label(for="Numele")
+												| Prof Numele dumenvoastra
+											input(type="input" class="form-control" id="Numele" placeholder="numele complet va rugam")
+										.form-group
+											label(for="email de contact")
+												| Prof Email
+											input(type="input" class="form-control" id="email" placeholder="email de contact")
+										.form-group
+											label(for="telefon")
+												| Prof Telefon
+											input(type="input" class="form-control" id="telefon" placeholder="telefon sau mobil")
+										
+
+									.col-xs-12.col-sm-6
+										.form-group
+											label(for="exampleInputEmail1")
+												| Prof Mesajul dumnevoastra
+											textarea(class="form-control" rows="8" placeholder="sau daca aveti alte observatii...")
+									.col-xs-12.text-center.sectionPadding
+										a.btn.btn-lg.btn-ghost-type_two(href="formular.html")
+											| Trimite mesajul
+									.col-xs-12.text-center.sectionPadding
+										p va lumtumim pentru ca ne-ati contactat
+				.col-md-3
+					include views/weNeedYou
 
 
 

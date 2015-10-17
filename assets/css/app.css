@@ -9028,6 +9028,17 @@ section.form .sectionPadding {
   padding-top: 3em;
 }
 
+.contactForm .nav-tabs a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-style: normal;
+}
+
+.contactForm .tab-content {
+  padding-top: 1em;
+}
+
 section.footer {
   color: white;
   padding: 4em 0 0 0;

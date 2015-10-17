@@ -502,41 +502,87 @@
     <section class="form">
       <div class="container-fluid">
         <div class="col-xs-12">
+          <p class="text-center">Puteti sa ne contactati telefonic la numarul: <a href="tel:0751-02-03-62">0751.02.03.62</a></p>
           <!-- title Post-->
           <h1 class="text-center">Formular contact<br><small>vom incerca sa va raspundem cit mai promt la sugestii</small></h1>
         </div>
       </div>
-      <div class="container">
+      <div class="container contactForm">
         <div class="row">
-          <div class="col-xs-12">
-            <form>
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="form-group">
-                    <label for="Numele">Numele dumenvoastra</label>
-                    <input type="input" id="Numele" placeholder="numele complet va rugam" class="form-control">
+          <div class="col-xs-12 col-md-9">
+            <!-- Nav tabs-->
+            <ul role="tablist" class="nav nav-tabs">
+              <li role="presentation" class="active"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact</a></li>
+              <li role="presentation"><a href="#profesor" aria-controls="profile" role="tab" data-toggle="tab">Profesor Contatc</a></li>
+            </ul>
+            <!-- Tab panes-->
+            <div class="tab-content">
+              <div role="tabpanel" id="contact" class="tab-pane active"><br>
+                <form>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <label for="Numele">Numele dumenvoastra</label>
+                        <input type="input" id="Numele" placeholder="numele complet va rugam" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="email de contact">Email</label>
+                        <input type="input" id="email" placeholder="email de contact" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="telefon">Telefon</label>
+                        <input type="input" id="telefon" placeholder="telefon sau mobil" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Mesajul dumnevoastra</label>
+                        <textarea rows="8" placeholder="sau daca aveti alte observatii..." class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 text-center sectionPadding"><a href="formular.html" class="btn btn-lg btn-ghost-type_two">Trimite mesajul</a></div>
+                    <div class="col-xs-12 text-center sectionPadding">
+                      <p>va lumtumim pentru ca ne-ati contactat</p>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="email de contact">Email</label>
-                    <input type="input" id="email" placeholder="email de contact" class="form-control">
-                  </div>
-                  <div class="form-group">
-                    <label for="telefon">Telefon</label>
-                    <input type="input" id="telefon" placeholder="telefon sau mobil" class="form-control">
-                  </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Mesajul dumnevoastra</label>
-                    <textarea rows="8" placeholder="sau daca aveti alte observatii..." class="form-control"></textarea>
-                  </div>
-                </div>
-                <div class="col-xs-12 text-center sectionPadding"><a href="formular.html" class="btn btn-lg btn-ghost-type_two">Trimite mesajul</a></div>
-                <div class="col-xs-12 text-center sectionPadding">
-                  <p>va lumtumim pentru ca ne-ati contactat							</p>
-                </div>
+                </form>
               </div>
-            </form>
+              <div id="profesor" role="tabpanel" class="tab-pane"><br>
+                <form>
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <label for="Numele">Prof Numele dumenvoastra</label>
+                        <input type="input" id="Numele" placeholder="numele complet va rugam" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="email de contact">Prof Email</label>
+                        <input type="input" id="email" placeholder="email de contact" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="telefon">Prof Telefon</label>
+                        <input type="input" id="telefon" placeholder="telefon sau mobil" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Prof Mesajul dumnevoastra</label>
+                        <textarea rows="8" placeholder="sau daca aveti alte observatii..." class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 text-center sectionPadding"><a href="formular.html" class="btn btn-lg btn-ghost-type_two">Trimite mesajul</a></div>
+                    <div class="col-xs-12 text-center sectionPadding">
+                      <p>va lumtumim pentru ca ne-ati contactat</p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="weneedyou text-center"><a href="profesor_form.html"><img src="assets/images/weNeedYou.jpg" alt="..." class="img-responsive"></a>
+              <p class="lead">Ai un proiect interesant?</p><a href="profesor_form.html" class="btn btn-lg btn-ghost-type_two">Contacteaza-ne rapid</a>
+            </div>
           </div>
         </div>
       </div>
@@ -561,6 +607,34 @@
         </div>
       </div>
     </section>
+    <!-- modal newsletter-->
+    <!-- Button trigger modal-->
+    <button type="button" data-toggle="modal" data-target="#newsletterModal" class="btn btn-primary btn-lg">newsletter triger</button>
+    <!-- Modal-->
+    <div id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <h4 id="newsletterModalLabel" class="modal-title">Newsletter</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" placeholder="Email" class="input-lg form-control">
+              </div>
+              <div class="form-group">
+                <!--button.btn.btn-default(type="button" data-dismiss="modal") Close-->
+                <button type="button" class="btn btn-primary pull-right">Inscrie-ma la update-uri pe email</button>
+              </div>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+          <!--.modal-footer-->
+        </div>
+      </div>
+    </div>
     <section class="footer">
       <div class="container-fluid">
         <div class="container">
