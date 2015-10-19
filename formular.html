@@ -532,6 +532,15 @@
                     <input type="input" placeholder="telefon sau mobil" class="form-control Tel input-lg">
                   </div>
                 </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" checked>sunt deacord sa ma inscriu la update-uri pe email
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-xs-12 sectionPadding">
                   <h3 class="text-center">Datele Copilului</h3>
                 </div>
@@ -713,6 +722,34 @@
         </div>
       </div>
     </section>
+    <!-- modal newsletter-->
+    <!-- Button trigger modal-->
+    <button type="button" data-toggle="modal" data-target="#newsletterModal" class="btn btn-primary btn-lg">newsletter triger</button>
+    <!-- Modal-->
+    <div id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModalLabel" class="modal fade">
+      <div role="document" class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+            <h4 id="newsletterModalLabel" class="modal-title">Newsletter</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" placeholder="Email" class="input-lg form-control">
+              </div>
+              <div class="form-group">
+                <!--button.btn.btn-default(type="button" data-dismiss="modal") Close-->
+                <button type="button" class="btn btn-primary pull-right">Inscrie-ma la update-uri pe email</button>
+              </div>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+          <!--.modal-footer-->
+        </div>
+      </div>
+    </div>
     <section class="footer">
       <div class="container-fluid">
         <div class="container">

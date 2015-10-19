@@ -8327,6 +8327,11 @@ section.cours .well .price {
   font-size: .9em;
 }
 
+.sidebar .newsletter {
+  background: url(../images/clowd.png) 50% 50% #94e0ed;
+  padding: 1em;
+}
+
 .tags .badge {
   font-size: 1em;
   margin-top: .5em;
