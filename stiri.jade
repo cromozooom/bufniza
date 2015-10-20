@@ -91,6 +91,10 @@ block content
 						form
 							.text-center
 								h3 Newsletter
+							.alert.alert-danger(role="alert")
+								span.glyphicon.glyphicon-exclamation-sign(aria-hidden="true")
+								span.sr-only Error:
+								| &nbsp;&nbsp;Aceasta nu este o adresa de mail.
 							.form-group
 								label.sr-only(for="email") Email address
 								input.input-lg.form-control(type="email" id="email" placeholder="Email")
