@@ -5,12 +5,18 @@ section.newsletter
 				block newsletterForm
 					form
 
-						.col-sm-12.col-lg-10.col-lg-offset-2
+						.col-sm-12.col-lg-10.col-lg-offset-2.text-center
 							h3 Newsletter
+						.col-sm-12.col-lg-8.col-lg-offset-2.text-center
+							.alert.alert-danger(role="alert")
+								span.glyphicon.glyphicon-exclamation-sign(aria-hidden="true")
+								span.sr-only Error:
+								| &nbsp;&nbsp;Aceasta nu este o adresa de mail.
 						.form-group.col-xs-12.col-sm-5.col-md-7.col-lg-4.col-lg-offset-2
 							label.sr-only(for="email") Email address
 							input.input-lg.form-control(type="email" id="email" placeholder="Email")
 						.col-xs-12.col-sm-7.col-md-5.col-lg-4
+						
 							button.pull-right.btn-lg.btn.btn-default.btn-primary(type="submit") Inscrie-ma la update-uri pe email
 				br
 
@@ -31,6 +37,10 @@ button(type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-tar
 				h4.modal-title#newsletterModalLabel Newsletter
 			.modal-body
 				form
+					.alert.alert-danger(role="alert")
+						span.glyphicon.glyphicon-exclamation-sign(aria-hidden="true")
+						span.sr-only Error:
+						| &nbsp;&nbsp;Aceasta nu este o adresa de mail.
 					.form-group
 						label.sr-only(for="email") Email address
 						input.input-lg.form-control(type="email" id="email" placeholder="Email")
