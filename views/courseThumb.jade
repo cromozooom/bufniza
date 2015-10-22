@@ -1,17 +1,17 @@
 if view == "cursThumbCateg"
 	mixin cursThumbCateg(href, thumb, categ, title, categoryChildren, timeframe)
 		//- href = link curs
-		//- title = 
+		//- title =
 		//- categHref = link curs categ
 		//- categ = categ
 		//- thumb = link categ
-		//- categ = 
-		//- categoryChildren = 
-		//- timeframe = 
+		//- categ =
+		//- categoryChildren =
+		//- timeframe =
 		.col-xs-12.col-sm-6.col-md-4.col-lg-3
 			.curs.thumbnail
 				a(href="#{href}")
-					img.img-responsive(src="assets/images/#{thumb}" alt="#{title}")
+					img.img-responsive(src="assets/images/thumb/#{thumb}" alt="#{title}")
 				.caption
 					a(href="#{categHref}")
 						span.label.label-default #{categ}
@@ -34,10 +34,10 @@ if view == "cursThumbCateg"
 					.pull-left(class="#{categoryChildren}")
 						include ../assets/images/children_size.svg
 						//- use(xlink:href="#children_size" x="0" y="0")
-						
+
 					p.pull-right= timeframe
 
-		
+	+cursThumbCateg("descopera_lumea.html", "categ_dictie.jpg", "curiozitati", "Cristalizeaza-ti limba", "a b", "5h")
 	+cursThumbCateg("descopera_lumea.html", "categ_descoperaLumea.jpg", "curiozitati", "Descopera lumea...", "a b", "5h")
 	+cursThumbCateg("descopera_lumea.html", "categ_montajFilm.jpg", "curiozitati", "Montaj Film", "a", "5h")
 	+cursThumbCateg("descopera_lumea.html", "categ_it.jpg", "curiozitati", "Curs IT", "c", "5h")
@@ -54,7 +54,6 @@ if view == "cursThumbCateg"
 	+cursThumbCateg("descopera_lumea.html", "categ_lumeaCulorilor.jpg", "arta", "Lumea culorilor", "a b c", "5 luni")
 	+cursThumbCateg("descopera_lumea.html", "categ_sah.jpg", "arta", "SAH", "a b c", "5 luni")
 	+cursThumbCateg("descopera_lumea.html", "categ_atelierulDeIerburi.jpg", "arta", "Atelierul de ierburi", "a b c", "5 luni")
-	
 
 
 
@@ -69,7 +68,7 @@ if view == "cursThumbCateg"
 				a(href="cursuri.html")
 					span.label.label-default Arta si creeatie
 				a(href="descopera_lumea.html")
-					h5 Descopera lumea... 
+					h5 Descopera lumea...
 				//- h3 Sah mat !
 				//- h3 Lumea magica a culorilor.
 				//- h3 Provocarea LEGO.
@@ -87,7 +86,7 @@ if view == "cursThumbCateg"
 				.pull-left.a.b
 					include ../assets/images/children_size.svg
 					//- use(xlink:href="#children_size" x="0" y="0")
-					
+
 				p.pull-right 5h
 
 if view == "cursThumbSidebar"
@@ -98,7 +97,7 @@ if view == "cursThumbSidebar"
 				//-a(href="cursuri.html")
 					span.label.label-default Arta si creeatie
 				a(href="descopera_lumea.html")
-					h5 Descopera lumea... 
+					h5 Descopera lumea...
 				//- h3 Sah mat !
 				//- h3 Lumea magica a culorilor.
 				//- h3 Provocarea LEGO.
@@ -116,5 +115,5 @@ if view == "cursThumbSidebar"
 				//- .pull-left.a.b
 					include ../assets/images/children_size.svg
 					//- use(xlink:href="#children_size" x="0" y="0")
-					
+
 				//- p.pull-right 5h
