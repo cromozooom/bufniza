@@ -1,17 +1,37 @@
 extends views/layout
 
 block content
-	section.form
-		.container-fluid
-			.col-xs-12
-				p.text-center Puteti sa ne contactati telefonic la numarul: 
+	- var namepage = "contact"
+		//-  Map
+	section#contact.map
+		.container
+			.row
+				.col-xs-12.col-md-6
+					h4  Adresa mea este:
+					p
+						| Sector 4,
+						br
+						| Strada Serg. Nitu Vasile nr. 26,
+						br
+						| etaj 1 - deasupra farmaciei Belladonna
+					hr
+					h4 Telefon
+					p Puteti sa ne contactati telefonic la numarul:
 					a(href="tel:0751-02-03-62") 0751.02.03.62
-				// title Post
-				h1.text-center
-					| Formular contact
-					br
+					hr
+					h4 Sau prin email
+					p completati formularul de&nbsp;
+						a(href="#form"): strong mai jos
 					small vom incerca sa va raspundem cit mai promt la sugestii
-		.container.contactForm
+				.col-xs-12.col-md-6
+					iframe(width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22807.95975270948!2d26.122219!3d44.392225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fe4238c5dae3%3A0xbe23029e01839c79!2sStrada+Ni%C8%9Bu+Vasile+26%2C+Bucure%C8%99ti+041543%2C+Romania!5e0!3m2!1sit!2sit!4v1447074728671" frameborder="0" style="border:0" allowfullscreen)
+					//- iframe(width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?ll=44.391749,26.119838&z=16&t=m&hl=it-IT&gl=IT&mapclient=embed&q=Strada+Ni%C8%9Bu+Vasile+26+Bucure%C8%99ti+041543+Romania")
+					//-  br
+						small
+							a(href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d22807.95975270948!2d26.122219!3d44.392225!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1fe4238c5dae3%3A0xbe23029e01839c79!2sStrada+Ni%C8%9Bu+Vasile+26%2C+Bucure%C8%99ti+041543%2C+Romania!5e0!3m2!1sit!2sit!4v1447074728671")
+								sample
+	section.form
+		.container.contactForm#form
 			.row
 				.col-xs-12.col-md-9
 					// Nav tabs
@@ -39,7 +59,7 @@ block content
 											label(for="telefon")
 												| Telefon
 											input(type="input" class="form-control" id="telefon" placeholder="telefon sau mobil")
-										
+
 
 									.col-xs-12.col-sm-6
 										.form-group
@@ -88,4 +108,3 @@ block content
 
 
 
-	
