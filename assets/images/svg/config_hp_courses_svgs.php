@@ -70,8 +70,9 @@ $svg_courses_assoc_config = array(
 
 	'ikebana' => 'ikebana curs',
 	
-	'pasaport' => 'pasaport pentru reusita',
+	'pasaportDeReusita' => 'Pasaport',
 	
+
 
 	//'<id_unic_1>' => '<Label 1 afisat in sectiunea de admin>',
 

@@ -1,5 +1,4 @@
-
-<symbol id="pasaport">
+<symbol id="pasaportDeReusita">
 	<circle id="circle_18_" fill="#FDEAA2" cx="118" cy="118" r="118"/>
 	<path id="XMLID_122_" fill="#E6E7E8" d="M141.7,191.1H52.3c-7.1,0-12.8-5.8-12.8-12.8v-50.3c0-7.1,5.8-12.8,12.8-12.8h89.4
 		c7.1,0,12.8,5.8,12.8,12.8v50.3C154.5,185.3,148.7,191.1,141.7,191.1z"/>
