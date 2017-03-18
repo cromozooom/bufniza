@@ -24,10 +24,17 @@
 @import mysass/sections/footer.sass
 @import mysass/sections/newsletter.sass
 
-
-.sediile
-  li
-    width: 50%
-    a
-      border-radius: 0
-      border: none
+.listaCursuri
+  .row.coursList
+    //background: red
+  .tab-content, .nav-tabs
+    border-bottom: 0
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus
+    border-radius: 0
+    border: 0
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .tab-content
+    background: darken(white, 10%)
+    overflow: hidden
+  .sediile
+    li
+      width: 50%
