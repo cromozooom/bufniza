@@ -2,40 +2,20 @@ extends views/layout
 
 block content
 	section.listaCursuri
-		.container-fluid.no-gutter.cover
-			.row
-				.col-xs-12
-					img.img-responsive(src="assets/images/header_cursuri.jpg" alt="...")
-		.container-fluid
-			.row
-				//-
-					.col-xs-12
-					ol.breadcrumb
-						li
-							a(href="#") Home
-						li.active
-							a(href="#") Cursuri
-				.col-xs-12.col-md-3.col-lg-2
-					h5 Filtreaza cursurile
-					div.list-group
-						a(href="#").list-group-item.active
-							.badge 16
-							| Toate
-						a(href="#").list-group-item
-							.badge 14
-							| Stiinte
-						a(href="#").list-group-item
-							.badge 5
-							| Arta si creeatie
-						a(href="#").list-group-item
-							.badge 2
-							| Divertisment
-						a(href="#").list-group-item
-							.badge 5
-							| Inteligenta
-				.col-xs-12.col-md-9.col-lg-10
-						h5 Toate cursurile
-						block cursThumb
-							- view = "cursThumbCateg"
-							.row
-								include views/courseThumb
+		div
+			// Nav tabs
+			ul.nav.nav-tabs(role='tablist')
+				li.active(role='presentation')
+					a(href='#home', aria-controls='home', role='tab', data-toggle='tab') Home
+				li(role='presentation')
+					a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Profile
+				li(role='presentation')
+					a(href='#messages', aria-controls='messages', role='tab', data-toggle='tab') Messages
+				li(role='presentation')
+					a(href='#settings', aria-controls='settings', role='tab', data-toggle='tab') Settings
+			// Tab panes
+			.tab-content
+				#home.tab-pane.active(role='tabpanel') ...
+				#profile.tab-pane(role='tabpanel') ...
+				#messages.tab-pane(role='tabpanel') ...
+				#settings.tab-pane(role='tabpanel') ...

@@ -1,28 +1,26 @@
-extends views/layout
+//extends views/layout
 
 block content
 	section.stiri
 		.container-fluid
 			.col-xs-12
-				// title Post
+				//- title Post
 				h1.text-center
 					| Stiri Bufnita din Tei
 					br
 					small Descopera ultimele noutati din cuibul meu ...
 		.container
 			.row
-						
-
 				.col-xs-12.col-md-8.col-lg-8
 					mixin newsItemList(data, title, excerpt, content, link)
 						li
 							.col-xs-12
 								small= data
-								// title news
+								//- title news
 								a(href="#{link}")
 									h4= title
 								p= excerpt
-							
+
 							.col-xs-12.col-sm-6
 									block
 
@@ -65,12 +63,12 @@ block content
 							li
 								a(href="#" aria-label="Next")
 									span(aria-hidden="true") &raquo;
- 
+
 				.col-xs-12.col-md-4.col-lg-4.sidebar
-					// ADD all courses
+					//- ADD all courses
 					include include/addAllCourses
 					hr
-					// Ultimele Cursuri (prmotii)
+					//- Ultimele Cursuri (prmotii)
 					.profesori.text-center
 						h3 Ultimele cursuri
 						hr
@@ -116,7 +114,7 @@ block content
 							.col-xs-6.col-sm-4.col-lg-6
 								include views/profesor
 						.clearfix
-					
+
 					// Tags
 					.tags.text-center
 						h3 Tags
