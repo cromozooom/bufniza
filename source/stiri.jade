@@ -1,0 +1,167 @@
+//extends views/layout
+
+block content
+	section.stiri
+		.container-fluid
+			.col-xs-12
+				//- title Post
+				h1.text-center
+					| Stiri Bufnita din Tei
+					br
+					small Descopera ultimele noutati din cuibul meu ...
+		.container
+			.row
+				.col-xs-12.col-md-8.col-lg-8
+					mixin newsItemList(data, title, excerpt, content, link)
+						li
+							.col-xs-12
+								small= data
+								//- title news
+								a(href="#{link}")
+									h4= title
+								p= excerpt
+
+							.col-xs-12.col-sm-6
+									block
+
+							.col-xs-12.col-sm-6
+								p.small
+									| !{content}
+								a.btn.btn-sm.btn-ghost-type_two.pull-right(href="#{link}")
+									| citeste mai mult
+							.clearfix
+							hr
+					ul.posts
+						+newsItemList( "23.05.15", "Azi am mai racolat un profesor", "Cursurile CISCO IT Essentials", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "stire.html")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.06.15", "Ieri am iesit in parc", "Cursantii indiferent dse virsta au fost exctrem de multumiti", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "stire.html")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.05.15", "Azi am mai racolat un profesor", "Cursurile CISCO IT Essentials", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "stire.html")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.06.15", "Ieri am iesit in parc", "Cursantii indiferent dse virsta au fost exctrem de multumiti", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "stire.html")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.05.15", "Azi am mai racolat un profesor", "Cursurile CISCO IT Essentials", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "stire.html")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+						+newsItemList( "23.06.15", "Ieri am iesit in parc", "Cursantii indiferent dse virsta au fost exctrem de multumiti", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet sem non arcu eleifend commodo. Morbi vel nulla ac neque elementum pellentesque id et orci. Morbi nec ullamcorper felis. Proin at velit vel purus molestie commodo imperdiet sit amet turpis. Morbi scelerisque ac risus vehicula condimentum. Ut aliquam nulla in lectus ullamcorper condimentum. Etiam pretium dolor eu massa aliquet faucibus. Fusce ut aliquet justo.", "stire.html")
+							img.img-responsive(src="assets/images/thumb_course_01.jpg" alt="...")
+
+					.clearfix
+					nav
+						mixin pagiation(page, link, classActive)
+							li(class="#{classActive}"): a(href="#{link}")= page
+						ul.pagination
+							li
+								a(href="#" aria-label="Previous")
+									span(aria-hidden="true") &laquo;
+							+pagiation(1, "#page1", "active")
+							+pagiation(2, "#page2", "")
+							+pagiation(3, "#page3", "")
+							+pagiation(4, "#page4", "")
+							+pagiation(5, "#page5", "")
+							+pagiation(6, "#page6", "")
+
+							li
+								a(href="#" aria-label="Next")
+									span(aria-hidden="true") &raquo;
+
+				.col-xs-12.col-md-4.col-lg-4.sidebar
+					//- ADD all courses
+					include include/addAllCourses
+					hr
+					//- Ultimele Cursuri (prmotii)
+					.profesori.text-center
+						h3 Ultimele cursuri
+						hr
+						.clearfix
+						block cursThumb
+							- view = "cursThumbSidebar"
+							.col-xs-6
+								include views/courseThumb
+							.col-xs-6
+								include views/courseThumb
+							.col-xs-6
+								include views/courseThumb
+							.col-xs-6
+								include views/courseThumb
+						.clearfix
+					// Newleter
+					.newsletter
+						form
+							.text-center
+								h3 Newsletter
+							.alert.alert-danger(role="alert")
+								span.glyphicon.glyphicon-exclamation-sign(aria-hidden="true")
+								span.sr-only Error:
+								| &nbsp;&nbsp;Aceasta nu este o adresa de mail.
+							.form-group
+								label.sr-only(for="email") Email address
+								input.input-lg.form-control(type="email" id="email" placeholder="Email")
+							.form-group.text-center
+								button.btn-lg.btn.btn-default.btn-primary(type="submit") Inscrie-ma la update-uri pe email
+					// Echipa noastra
+					.profesori.text-center
+						h3 Echipa noastra
+						hr
+						.clearfix
+						block profesoriThumb
+							- view = "profThumbSidebar"
+							.col-xs-6.col-sm-4.col-lg-6
+								include views/profesor
+							.col-xs-6.col-sm-4.col-lg-6
+								include views/profesor
+							.col-xs-6.col-sm-4.col-lg-6
+								include views/profesor
+							.col-xs-6.col-sm-4.col-lg-6
+								include views/profesor
+						.clearfix
+
+					// Tags
+					.tags.text-center
+						h3 Tags
+						hr
+						ul.list-inline
+							li
+								a(href="cursuri.html")
+									span.badge Limbi straine
+							li
+								a(href="cursuri.html")
+									span.badge Stiinta
+							li
+								a(href="cursuri.html")
+									span.badge Limbi straine
+							li
+								a(href="cursuri.html")
+									span.badge Stiinta
+							li
+								a(href="cursuri.html")
+									span.badge Limbi straine
+							li
+								a(href="cursuri.html")
+									span.badge Stiinta
+					.clearfix
+
+	// popUP categorii de virsta ?
+	#categoriiVarsta.modal.fade
+		.modal-dialog
+			.modal-content
+				.modal-header
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						span(aria-hidden="true") &times;
+					h4.modal-title Categorii de vista
+				.modal-body
+					p Iconitele de mai jos reprezinta categoriile de virsta in modul urmator:
+					.pull-left 5-7 ani
+					.pull-right.a
+							include assets/images/children_size.svg
+					.clearfix
+					.pull-left 8-12 ani
+					.pull-right.b
+							include assets/images/children_size.svg
+					.clearfix
+					.pull-left 12-14 ani
+					.pull-right.c
+							include assets/images/children_size.svg
+					.clearfix
+				.modal-footer
+					button.btn.btn-default(type="button" data-dismiss="modal") Inchide fereastra
+					//- button.btn.btn-primary(type="button") Inchide fereastra

@@ -1,0 +1,29 @@
+extends ./templates/includes/_layout.jade
+
+block title
+  title Home | SITENAME
+
+block content
+  .container
+    .row
+      .col-md-12
+        h2 Welcome to Grunt Sitebulder
+        p On save, the task runner will look for changes, compile the file from various formats (Sass, Coffee, Jade), and export to the build folder. 
+        p Uses BrowserSync to generate a local server.
+        ul
+          li Sass files go in 
+            em source/styles/ 
+            | and on save will run autoprefixer. In build mode the stylesheet is minified.
+          li Coffeescript files go in 
+            em source/scripts/ 
+            | and on save will run JSLint. Minify/Uglify is disabled for Angular apps. 
+          li Vendor scripts (like Angular, jQuery, etc) go in the 
+            em source/scripts/vendor/ 
+            | folder.
+          li Jade files go in 
+            em source/templates/
+          li Assets (Images/fonts/svg/json) go in 
+            em source/content/
+        p There is also a 
+          em source/components/ 
+          | folder for Angular/React/Meteor development of modules. Put any related Sass or Coffeescript files in their module directories for proper organization. Coffeescript files put here will be concatenated into the main JS file, and Sass files will be added to the main stylesheet (when included).

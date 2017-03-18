@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="portfolio" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en">
+    <title>Home | SITENAME</title>
+    <meta name="robots" content="index,follow">
+    <meta name="revised" content="Thursday, April 21th, 2016, 2:34 pm">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
+    <link rel="stylesheet" href="/style.css" media="screen, projection">
+    <link rel="icon" href="/content/favicon.ico">
+    <link rel="shortcut icon" href="/content/favicon.ico">
+    <link rel="apple-touch-icon" href="/content/apple-touch-icon.png">
+    <!-- Meta tags-->
+    <meta name="url" content="http://SITEURL.com/">
+    <meta name="identifier-URL" content="http://SITEURL.com/">
+    <link rel="index" href="http://SITEURL.com/" title="SITE TITLE">
+    <link rel="canonical" href="http://SITEURL.com/">
+    <!-- Location tagging (Lat/Long)-->
+    <meta name="ICBM" content="30.185744,-97.762242">
+    <meta name="geo.position" content="30.185744,-97.762242">
+    <meta name="geo.placename" content="Austin, TX, United States">
+    <meta name="geo.region" content="us-tx">
+    <!-- Facebook Opengraph-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="http://path/to/image">
+    <!-- Twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SITETWITTER">
+    <meta name="twitter:creator" content="@CREATORTWITTER">
+    <meta name="twitter:title" content="SITE TITLE">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://path/to/image">
+    <!-- Google+-->
+    <meta itemprop="description" content="Sean Loyless is a web developer from Austin, Texas specializing in front end web development.">
+    <!-- iOS-->
+    <meta name="apple-mobile-web-app-title" content="Sean Loyless Designs">
+  </head>
+  <body>
+    <header id="global-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Welcome to Grunt Sitebulder</h2>
+          <p>On save, the task runner will look for changes, compile the file from various formats (Sass, Coffee, Jade), and export to the build folder. </p>
+          <p>Uses BrowserSync to generate a local server.</p>
+          <ul>
+            <li>Sass files go in <em>source/styles/ </em>and on save will run autoprefixer. In build mode the stylesheet is minified.</li>
+            <li>Coffeescript files go in <em>source/scripts/ </em>and on save will run JSLint. Minify/Uglify is disabled for Angular apps. </li>
+            <li>Vendor scripts (like Angular, jQuery, etc) go in the <em>source/scripts/vendor/ </em>folder.</li>
+            <li>Jade files go in <em>source/templates/</em></li>
+            <li>Assets (Images/fonts/svg/json) go in <em>source/content/</em></li>
+          </ul>
+          <p>There is also a <em>source/components/ </em>folder for Angular/React/Meteor development of modules. Put any related Sass or Coffeescript files in their module directories for proper organization. Coffeescript files put here will be concatenated into the main JS file, and Sass files will be added to the main stylesheet (when included).</p>
+        </div>
+      </div>
+    </div>
+    <footer id="global-footer" class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p style="text-align: center">All content &copy; SITE NAME</p>
+        </div>
+      </div>
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-sanitize.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>

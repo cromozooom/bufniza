@@ -1,0 +1,155 @@
+block var
+	include ../config/config
+
+doctype html
+html(lang='en')
+	head
+		block meta
+			meta(charset='utf-8')
+			meta(http-equiv='X-UA-Compatible', content='IE=edge')
+			meta(name='viewport', content='width=device-width, initial-scale=1')
+			meta(name='description', content='#{metaDescription}')
+			meta(name='author', content='#{metaAuthor}')
+
+		block titlePage
+			title #{titlePage}
+
+		block linkHead
+			link(rel='icon', href='#{pathToAssets}/favicon.ico')
+			//- Bootstrap core CSS
+			link(href='#{pathToAssets}/styles/style.css', rel='stylesheet')
+			//- Custom styles for this template
+			//- link(href='#{pathToSelectedTemplateWithinBootstrap}/starter-template.css', rel='stylesheet')
+			//-
+			//- Just for debugging purposes. Don't actually copy these 2 lines!
+			// if lt IE 9
+			script(src='#{pathToAssets}/docs/assets/js/ie8-responsive-file-warning.js')
+			script(src='#{pathToAssets}/docs/assets/js/ie-emulation-modes-warning.js')
+			// IE10 viewport hack for Surface/desktop Windows 8 bug
+			script(src='#{pathToAssets}/docs/assets/js/ie10-viewport-bug-workaround.js')
+			// HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+			// if lt IE 9
+				script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+				script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+
+			//- fontgoogle
+			//- link(href="#{googleFonts01}" rel="stylesheet" type="text/css")
+
+	body(class="#{namepage}")
+		include ../include/facebookSDK.html
+		svg(style="display: none;")
+			include ../assets/images/logo_bufnita_din_tei.svg
+			//- include ../assets/images/iconCours.svg
+
+		block header
+			if yamm == true
+				include ../views/yamm/navbar-fixed.jade
+				// include ../views/navbar-more.jade
+			else
+				.navbar.navbar-inverse.navbar-static-top(role='navigation')
+					.container-fluid
+						.navbar-header
+							button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+							a.navbar-brand(href='index.html')
+								svg.hidden-xs.hidden-sm.hidden-md(viewBox="0 0 445 80" width="332" height="60")
+									use(xlink:href="#logo" x="0" y="0")
+								svg.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
+									use(xlink:href="#logo" x="0" y="0")
+								//
+									svg.hidden-md.hidden-sm.hidden-lg(viewBox="0 0 445 80" width="332" height="60")
+										use(xlink:href="#logo" x="0" y="0")
+
+
+						.collapse.navbar-collapse.navbar-right
+							ul.nav.navbar-nav
+								li
+									a(href='index.html') HOME
+								li
+									a(href='cursuri.html') CURSURI
+								li
+									a(href='despre.html') DESPRE NOI
+								li
+									a(href='stiri.html') NEWS
+								li
+									a(href='contact.html') CONTACT
+
+							.col-xs-12.navbar-form
+								.input-group
+									input.form-control(type="text" placeholder="cauta...")
+									span.input-group-btn
+										button.btn.btn-default(type="button")
+											span.glyphicon.glyphicon-search
+
+							//
+								form.navbar-form.navbar-right(role="search")
+								.form-group
+									input.form-control(type="text" placeholder="Search")
+								button.btn.btn-default(type="submit")
+									span.glyphicon.glyphicon-search
+
+						// /.nav-collapse
+		block content
+
+		block footer
+			include newsletter
+			mixin listItemFooter(copy, link)
+				li: a(href="#{link}") #{copy}
+			section.footer
+				.container-fluid
+					.container
+						.row
+							.col-xs-12.col-sm-6.col-md-3.col-md-push-3.cursuriFooter
+								//- hr.visible-xs-block.visible-sm-block
+								h4 Cursurile noastre
+								ul
+									+listItemFooter("Arta si creatie", "cursuri.html")
+									+listItemFooter("Limbi straine", "cursuri.html")
+									+listItemFooter("Logica", "cursuri.html")
+									+listItemFooter("Jocuri", "cursuri.html")
+									+listItemFooter("Hand made", "cursuri.html")
+									+listItemFooter("Arta si creatie", "cursuri.html")
+							.col-xs-12.col-sm-6.col-md-3.col-md-push-3.newsFooter
+								hr.visible-xs-block.visible-sm-block
+								h4 Articole recente
+								ul
+									+listItemFooter("Profesorul iordache apare", "stire.html")
+									+listItemFooter("Mergem La ZOO", "stire.html")
+									+listItemFooter("Invatza sa calaresti un pirtz vitezoman", "stire.html")
+									+listItemFooter("Oare care e cel mai bun profeso al nostru", "stire.html")
+									+listItemFooter("Hand made", "stire.html")
+									+listItemFooter("Arta si creatie", "stire.html")
+							.col-xs-12.col-sm-6.col-md-3.col-md-push-3
+								hr.visible-xs-block.visible-sm-block
+								h4 Pagina de facebook
+								<div class="fb-page" data-href="https://www.facebook.com/Bufnita-din-Tei-1609911665934551" data-small-header="false" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-show-posts="false"></div>
+							.col-xs-12.col-sm-6.col-md-3.col-md-pull-9.despreNoiFooter
+								hr.visible-xs-block.visible-sm-block
+								h4 Despre noi
+								p.small
+									| Contrar asteptarilor, mi-am facut cuibul intr-o cladire foarte luminoasa, chiar la strada (vis-à-vis de Piata Big Berceni), cu o amenajare placuta ochiului si mintii.
+									| Si pentru ca nu sunt o bufnita oarecare, ci una care prefera umbra ramurilor de tei, vei vedea ca am obiceiuri neobisnuite; de exemplu, imi place sa filozofez pe diverse teme, sa construiesc, sa mesteresc, dar si sa ma delectez cu delicatul “parfum al teilor in floare”.
+				.container-fluid.lastRowFooter
+					.container
+						.row
+							.col-xs-6
+								p.text-left.small Copyright Bufnita din tei 2015
+							.col-xs-6
+								p.text-right.small telefon:  0751.02.03.62
+
+		block endScript
+			//- Bootstrap core JavaScript
+			//- ==================================================
+			//- Placed at the end of the document so the pages load faster
+			script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+			script(src='#{pathToAssets}/javascripts/bootstrap.min.js')
+			script(src="http://maps.googleapis.com/maps/api/js?sensor=false&extension=.js&output=embed")
+			script(src='#{pathToAssets}/javascripts/google_maps.js')
+
+			//-if namepage == "contact"
+
+			//- yamm
+			script(src='#{pathToAssets}/javascripts/yamm.js')

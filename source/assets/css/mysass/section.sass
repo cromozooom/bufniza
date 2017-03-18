@@ -1,0 +1,185 @@
+section
+	padding: 4em 0
+	h2, h3
+		color: #333333
+		font-weight: 800
+	.btn, a
+		font-style: italic
+
+section.first
+	padding-top: 4em
+
+section.cursuri, section.cursuriAction
+	background: url("../images/section_head_bg_01.png") repeat-x 50% 0
+	padding-top: 5em
+
+section.descriere
+	padding-top: 0
+	padding: 0
+	background: #90d177
+	.row
+		display: flex
+	.col-xs-12:first-child
+		background: #90d177
+		img
+			max-width: 100%
+	.col-xs-12:last-child
+		background: #c8e8bb
+		padding: 5%
+		p, h2, a
+			max-width: 90%
+			margin: 5%
+
+	@media (max-width: $screen-sm-max)
+			.row
+				display: inline-block
+			img
+				width: 60%
+
+	@media (max-width: $screen-xs-max)
+			img
+				width: 100%
+
+section.cursuri
+	h2
+		margin-bottom: 2em
+	h3
+		font-size: 1em
+		margin-bottom: 2em
+	p
+		margin-bottom: 2em
+	a.btn
+		margin-top: 3em
+	a.lead
+		font-size: 1.2em
+	svg
+		max-width: 70%
+
+	@media (max-width: $screen-xs-max)
+		svg
+			margin-top: 6em
+			max-width: 50%
+		.first
+			svg
+				margin-top: 0em
+
+section.footer, section.team
+	background: url("../images/section_head_bg_02.png") repeat-x 50% 0 #30756d
+	
+
+section.team
+	h2
+		color: white
+	h2
+		margin-bottom: 2em
+	h4
+		margin-top: 1em
+		text-transform: uppercase
+		color: #c8e8bb
+	a.profLink
+		color: white
+
+	a.btn
+		margin-top: 3em
+	img.img-circle
+		margin: 0 auto
+
+	@media (max-width: $screen-xs-max)
+		img.img-circle
+			margin-top: 6em
+
+	@media (max-width: $screen-sm-max)
+		img.img-circle
+			margin-top: 4em
+
+section.cursuriAction
+	h2
+		margin-bottom: 2em
+	.thumbnail.first
+		background: #ffeca4
+
+	.thumbnail
+		border-radius: 10px
+		border: 0px transparent
+		background: #90d177
+		padding-bottom: 2em
+		img
+			border-top-left-radius: 10px
+			border-top-right-radius: 10px
+			width: 100%
+
+		h3, p
+			padding: 0 5%
+
+
+$btn-ghost-color-type_one: darken(#13a89e, 0%)
+$btn-ghost-color-hover-type_one: #13a89e
+$btn-ghost-radius-type_one: 0px
+
+.btn-ghost-type_one
+	@include button-variant-ghost($btn-ghost-color-type_one, $btn-ghost-color-hover-type_one,$btn-ghost-radius-type_one)
+
+$btn-ghost-color-type_two: darken(#90d177, 0%)
+$btn-ghost-color-hover-type_two: #90d177
+$btn-ghost-radius-type_two: 0px
+
+.btn-ghost-type_two
+	@include button-variant-ghost($btn-ghost-color-type_two, $btn-ghost-color-hover-type_two,$btn-ghost-radius-type_two)
+
+
+section.cours
+	.cover
+		background: white
+	.table-price
+		margin-top: 2em
+		margin-bottom: 0
+		.title
+			td
+				border-top: 0px solid white
+		.price
+			small
+				font-size: .5em
+	.well
+		border: none
+		border-radius: 0px
+		.price
+			font-size: 1.5em
+.description
+	.img-responsive
+		margin: 1.4em 0
+	.lead
+		//margin-top: 1.5em
+		margin-bottom: 1.5em
+.sidebar
+	hr
+		border-top: 3px solid lighten(black, 90%)
+	.profesor
+		p
+			font-size: .9em
+	.newsletter
+		background: url(../images/clowd.png) 50% 50% #94e0ed
+		padding: 1em
+
+
+.tags
+	.badge
+		font-size: 1em
+		margin-top: .5em
+		padding: .5em
+		background: $brand-primary
+
+
+.ssba img
+	width: 50px !important
+	padding: 0px
+	border:  0
+	box-shadow: none !important
+	display: inline !important
+	vertical-align: middle
+.ssba, .ssba a
+	text-decoration:none
+	border:0
+	background: none		
+	font-weight: bold
+
+

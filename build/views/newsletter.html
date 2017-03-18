@@ -1,0 +1,53 @@
+
+<section class="newsletter">
+  <div class="container-fluid">
+    <div class="container owlBg">
+      <div class="row">
+        <form>
+          <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center">
+            <h3>Newsletter</h3>
+          </div>
+          <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center">
+            <div role="alert" class="alert alert-danger"><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span><span class="sr-only">Error:</span>&nbsp;&nbsp;Aceasta nu este o adresa de mail.</div>
+          </div>
+          <div class="form-group col-xs-12 col-sm-5 col-md-7 col-lg-4 col-lg-offset-2">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" placeholder="Email" class="input-lg form-control"/>
+          </div>
+          <div class="col-xs-12 col-sm-7 col-md-5 col-lg-4">
+            <button type="submit" class="pull-right btn-lg btn btn-default btn-primary">Inscrie-ma la update-uri pe email</button>
+          </div>
+        </form><br/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- modal newsletter-->
+<!-- Button trigger modal-->
+<button type="button" data-toggle="modal" data-target="#newsletterModal" class="btn btn-primary btn-lg">newsletter triger</button>
+<!-- Modal-->
+<div id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModalLabel" class="modal fade">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+        <h4 id="newsletterModalLabel" class="modal-title">Newsletter</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div role="alert" class="alert alert-danger"><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span><span class="sr-only">Error:</span>&nbsp;&nbsp;Aceasta nu este o adresa de mail.</div>
+          <div class="form-group">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" placeholder="Email" class="input-lg form-control"/>
+          </div>
+          <div class="form-group">
+            <!--button.btn.btn-default(type="button" data-dismiss="modal") Close-->
+            <button type="button" class="btn btn-primary pull-right">Inscrie-ma la update-uri pe email</button>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+      <!--.modal-footer-->
+    </div>
+  </div>
+</div>
