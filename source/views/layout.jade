@@ -17,7 +17,7 @@ html(lang='en')
 		block linkHead
 			link(rel='icon', href='#{pathToAssets}/favicon.ico')
 			//- Bootstrap core CSS
-			link(href='#{pathToAssets}/styles/style.css', rel='stylesheet')
+			link(href='#{pathToAssets}/styles/app.css', rel='stylesheet')
 			//- Custom styles for this template
 			//- link(href='#{pathToSelectedTemplateWithinBootstrap}/starter-template.css', rel='stylesheet')
 			//-
@@ -31,10 +31,8 @@ html(lang='en')
 			// if lt IE 9
 				script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
 				script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
-
 			//- fontgoogle
 			//- link(href="#{googleFonts01}" rel="stylesheet" type="text/css")
-
 	body(class="#{namepage}")
 		include ../include/facebookSDK.html
 		svg(style="display: none;")
@@ -44,7 +42,7 @@ html(lang='en')
 		block header
 			if yamm == true
 				include ../views/yamm/navbar-fixed.jade
-				// include ../views/navbar-more.jade
+				//- include ../views/navbar-more.jade
 			else
 				.navbar.navbar-inverse.navbar-static-top(role='navigation')
 					.container-fluid
@@ -59,7 +57,7 @@ html(lang='en')
 									use(xlink:href="#logo" x="0" y="0")
 								svg.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
 									use(xlink:href="#logo" x="0" y="0")
-								//
+								//-
 									svg.hidden-md.hidden-sm.hidden-lg(viewBox="0 0 445 80" width="332" height="60")
 										use(xlink:href="#logo" x="0" y="0")
 
@@ -84,20 +82,32 @@ html(lang='en')
 										button.btn.btn-default(type="button")
 											span.glyphicon.glyphicon-search
 
-							//
+							//-
 								form.navbar-form.navbar-right(role="search")
 								.form-group
 									input.form-control(type="text" placeholder="Search")
 								button.btn.btn-default(type="submit")
 									span.glyphicon.glyphicon-search
 
-						// /.nav-collapse
+						//-.nav-collapse
 		block content
 
 		block footer
 			include newsletter
 			mixin listItemFooter(copy, link)
 				li: a(href="#{link}") #{copy}
+			section.prefooter
+				.container-fluid
+					.container
+						.row.menuFooter
+							.col-xs-12
+								ul.list-inline
+									li: a(href="#") Home
+									li: a(href="#") Activitati
+									li: a(href="#") Before & After School
+									li: a(href="#") Despre noi
+									li: a(href="#") News
+									li: a(href="#") Contact
 			section.footer
 				.container-fluid
 					.container

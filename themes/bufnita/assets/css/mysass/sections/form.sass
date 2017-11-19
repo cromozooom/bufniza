@@ -1,0 +1,23 @@
+section.form
+	padding-top: 0px
+	.container-fluid
+		background: lighten($brand-info, 30%)
+		padding: 1em
+		margin-bottom: 1em
+		h1
+			color: darken($brand-info, 10%)
+	form, label
+		font-family: $font-family-sans-serif
+		
+		&[disabled~="disabled"]
+			color: lighten($brand-danger, 30%)
+		.has-warning
+			color: $brand-danger
+		.has-success
+			color: $brand-success
+	label.checkbox-inline
+		input
+			padding: 5em
+			background: red
+	.sectionPadding
+		padding-top: 3em

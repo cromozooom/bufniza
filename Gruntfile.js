@@ -19,11 +19,11 @@ module.exports = function(grunt) {
       dev: {
         options: {
           outputStyle: 'compact',
-          outFile: '<%= project.build %>/assets/styles/style.css',
+          outFile: '<%= project.build %>/assets/styles/app.css',
           sourceMap: true
         },
         files: {
-            "<%= project.build %>/assets/styles/style.css": "<%= project.css %>/style.sass"
+            "<%= project.build %>/assets/styles/app.css": "<%= project.css %>/app.sass"
         }
       },
       build: {
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-            "<%= project.build %>/assets/styles/style.css": "<%= project.css %>/style.sass"
+            "<%= project.build %>/assets/styles/app.css": "<%= project.css %>/app.sass"
         }
       }
     },
@@ -85,7 +85,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-            "<%= project.build %>/style.css": "<%= project.build %>/style.css"
+            "<%= project.build %>/app.css": "<%= project.build %>/app.css"
         }
       }
     },
@@ -183,7 +183,7 @@ module.exports = function(grunt) {
         tasks: ['jade', 'notify:jade']
       },
       autoprefixer:{
-        files: ['<%= project.build %>/style.css'],
+        files: ['<%= project.build %>/app.css'],
         tasks: ['autoprefixer']
       },
       content: {
@@ -196,7 +196,7 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src : [
-              '<%= project.build %>/style.css',
+              '<%= project.build %>/app.css',
               '<%= project.build %>/**/*.js',
               '<%= project.build %>/content/**/*',
               '<%= project.build %>/**/*.html'

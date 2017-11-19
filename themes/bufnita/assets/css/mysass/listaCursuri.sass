@@ -1,0 +1,42 @@
+.cover
+	background: #bee6f3
+	img
+		margin: 0 0 0 auto
+
+section.listaCursuri
+	padding: 0em 0 4em 0
+	background: darken(white, 10%)
+
+	.list-group
+		.list-group-item
+			border-top-right-radius: 0px
+			border-top-left-radius: 0px
+			border-bottom-right-radius: 0px
+			border-bottom-left-radius: 0px
+			border: 0px transparent solid
+
+	.curs.thumbnail
+		a
+			font-style: normal
+		border: transparent 0px solid
+		img
+			border-top-left-radius: 10px
+			border-top-right-radius: 10px
+			width: 100%
+	.caption
+		overflow: hidden
+		h5
+			height: 3em
+		@media (max-width: $screen-xs-max)
+			h5
+				height: auto
+		p.pull-right
+			color: darken(white, 30%)
+			font-family: $font-family-sans-serif
+			font-weight: 400
+
+.sidebar
+	.curs.thumbnail
+		h5
+			height: 2em
+			font-size: 14px
