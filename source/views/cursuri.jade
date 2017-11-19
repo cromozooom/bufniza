@@ -9,126 +9,53 @@ mixin cursHomePage(firstLast, svgID, titleCourse, excerpt, CTA, ctaLink)
 		a.lead(href="#{ctaLink}" title="#{titleCourse}")
 			| !{CTA}
 
+mixin cursThumbCateg(href, thumb, categ, title, categoryChildren, timeframe)
+		//- href = link curs
+		//- title =
+		//- categHref = link curs categ
+		//- categ = categ
+		//- thumb = link categ
+		//- categ =
+		//- categoryChildren =
+		//- timeframe =
+
+		.col-xs-12.col-sm-6.col-md-4.col-lg-3
+			.curs.thumbnail
+				a(href="#{href}")
+					img.img-responsive(src="assets/images/thumb/#{thumb}" alt="#{title}")
+				.caption
+					a(href="#{categHref}")
+						span.label.label-default #{categ}
+					a(href="#{href}")
+						h5= title
+					//- h3 Sah mat !
+					//- h3 Lumea magica a culorilor.
+					//- h3 Provocarea LEGO.
+					//- h3 Marii constructori LEGO
+					//- h3 I did this !
+					//- h3 Hand-made:
+					//- h3 Curs de actorie si sociodrama
+					//- h3 Curs de literatura romana
+					//- h3 Cursuri de limbi straine
+					//- h3 Teatru de papusi
+					//- h3 Pasionat de jurnalism ?
+					//- h3 Povesti din fotografii
+					//- h3 Programare IT pentru copii
+
+					.pull-left(class="#{categoryChildren}")
+						include ../assets/images/children_size.svg
+						//- use(xlink:href="#children_size" x="0" y="0")
+
+					p.pull-right= timeframe
+
 section.cursuri
-	svg(style="display: none;")
-		//- ok
-		include ../templates/svgJade/svg_sahConcurs.jade
-		include ../templates/svgJade/svg_galilego.jade
-		include ../templates/svgJade/svg_sah.jade
-		include ../templates/svgJade/svg_atelierulDeIerburi.jade
-		include ../templates/svgJade/svg_descoperaLumea.jade
-		include ../templates/svgJade/svg_default.jade
-		include ../templates/svgJade/svg_montajFilm.jade
-		include ../templates/svgJade/svg_iT.jade
-		include ../templates/svgJade/svg_photo.jade
-		include ../templates/svgJade/svg_jurnalism.jade
-		include ../templates/svgJade/svg_teatruPapusi.jade
-		include ../templates/svgJade/svg_limbiStraine.jade
-		include ../templates/svgJade/svg_literaturaRomana.jade
-		include ../templates/svgJade/svg_actorieSociodrama.jade
-		include ../templates/svgJade/svg_lemnHandMade.jade
-		include ../templates/svgJade/svg_iDidThis.jade
-		include ../templates/svgJade/svg_legoKing.jade
-		include ../templates/svgJade/svg_lego.jade
-		include ../templates/svgJade/svg_lumeaCulorilor.jade
-		include ../templates/svgJade/svg_dictie.jade
-		include ../templates/svgJade/svg_yogaKids.jade
-		include ../templates/svgJade/svg_pixel.jade
-		include ../templates/svgJade/svg_ikebana.jade
-		include ../templates/svgJade/svg_pasaportDeReusita.jade
-		include ../templates/svgJade/svg_myUnivers.jade
-		include ../templates/svgJade/svg_math.jade
 	.container
 		.row
 			.col-xs-12.text-center
-				h2
-					| Citeva dintre cursurile mele:
-		.row
-			hr.visible-xs-block
-			+cursHomePage("", "#sahConcurs", "Concurs sah", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#myUnivers", "Universul meu", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#pasaportDeReusita", "Pasaport pentru reusita", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#ikebana", "Love ikebana", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#galilego", "Galilego", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#math", "Math is FUN", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-
-		.row
-			+cursHomePage("first", "#sah", "Sah mat!", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#atelierulDeIerburi", "Atelierul de ierburi", "Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane! ...", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#descoperaLumea", "Descopera lumea ...", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#default", "default", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-		.row
-			hr.visible-xs-block
-			+cursHomePage("", "#default", "default", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#montajFilm", "Montaj Film", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#iT", "IT", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#photo", "Photo", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-		.row
-			hr.visible-xs-block
-			+cursHomePage("", "#jurnalism", "jurnalism", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#teatruPapusi", "teatruPapusi", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#limbiStraine", "limbiStraine", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#literaturaRomana", "Literatura Romana", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-		.row
-			hr.visible-xs-block
-			+cursHomePage("", "#actorieSociodrama", "Actorie Sociodrama", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#lemnHandMade", "lemnHandMade", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#iDidThis", "i Did This", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#legoKing", "Lego King", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-		.row
-			hr.visible-xs-block
-			+cursHomePage("", "#lego", "Lego", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#lumeaCulorilor", "Lumea Culorilor", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#sah", "Sah", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#atelierulDeIerburi", "Atelierul de ierburi", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-		.row
-			hr.visible-xs-block
-			+cursHomePage("", "#descoperaLumea", "Descopera lumea ...", "Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...", "Vezi pagina de curs", "#")
-			+cursHomePage("", "#dictie", "Dictie", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-			hr.visible-xs-block
-			+cursHomePage("", "#yogaKids", "Yoga pentru copii", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-
-			+cursHomePage("", "#pixel", "Love pixel", "Ideal sa ia un profesor care scoate zeama din tine.", "Vezi pagina de curs", "#")
-
-
-			//- comment
-				.col-xs-12.col-md-4.text-center.first
-					svg(viewBox="0 0 237 237" width="236" height="236")
-						use(xlink:href="#sah" x="0" y="0")
-					h3.text-center
-						| Sah mat!
-					p
-						| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...
-					a.lead(href="" title="")
-						| Vezi pagina de curs
-				.col-xs-12.col-md-4.text-center
-					svg(viewBox="0 0 237 237" width="236" height="236")
-						use(xlink:href="#ierburi" x="0" y="0")
-					h3.text-center
-						| Atelierul de ierburi
-					p
-						| Pe copilul tau il asteapta o calatorie pe cinste in istoria și progresul civilizației umane! ...
-					a.lead(href="" title="")
-						| Vezi pagina de curs
-				.col-xs-12.col-md-4.text-center
-					svg(viewBox="0 0 237 237" width="236" height="236")
-						use(xlink:href="#lumea" x="0" y="0")
-					h3.text-center
-						| Descopera lumea
-					p
-						| Daca ai un micut intre 3 si 7 ani, acest atelier il va purta intr-o lume miraculoasa a plantelor ...
-					a.lead(href="" title="")
-						| Vezi pagina de curs
-				.col-xs-12.text-center
-					a.btn.btn-lg.btn-ghost-type_two
-						| Vezi alte cursuri
+				h2 Vezi citeva intre asctivitatile noastre
+		section.listaCursuri.row
+			+cursThumbCateg("descopera_lumea.html", "categ_galilego.jpg", "inteligenta", "GALILEGO", "b c", "3h")
+			+cursThumbCateg("descopera_lumea.html", "categ_myUnivers.jpg", "arta", "Universul meu", "a b c", "5 luni")
+			+cursThumbCateg("descopera_lumea.html", "categ_passport.jpg", "arta", "Yoga pentru copii", "a b c", "5 luni")
+			+cursThumbCateg("descopera_lumea.html", "categ_ikebana.png", "arta", "Yoga pentru copii", "a b c", "5 luni")
+	
