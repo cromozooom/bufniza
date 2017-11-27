@@ -3,10 +3,14 @@
 	img
 		margin: 0 0 0 auto
 
+
 section.cursuri
 	section.listaCursuri
-		.caption
-			background: lighten(black, 96%)
+		&--noBg
+			background: white
+			.thumbnail
+				transition: transform 1s
+				background: darken(white, 2%)
 
 section.listaCursuri
 	background: lighten(black, 96%)

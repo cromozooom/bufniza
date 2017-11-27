@@ -6,5 +6,8 @@
     "app.coffee"
   ],
   "names": [],
-  "mappings": ""
+  "mappings": "AAAA",
+  "sourcesContent": [
+    "# Angular/React/Meteor/JS code here"
+  ]
 }
