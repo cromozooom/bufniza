@@ -1,3 +1,3 @@
 # bufniza
 
-[link](https://cdn.rawgit.com/cromozooom/bufniza/38fe0903/build/index.html)
+[link](https://rawgit.com/cromozooom/bufniza/master/build/index.html)
