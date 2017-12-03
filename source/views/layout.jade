@@ -69,7 +69,7 @@ html(lang='en')
 								li: a(href='cursuri.html') BEFORE & AFTER SCHOOL
 								//-li: a(href='despre.html') DESPRE NOI
 								li: a(href='stiri.html') NEWS
-								//-li: a(href='contact.html') CONTACT
+								li: a(href='contact.html') ORAR
 
 							.col-xs-12.navbar-form
 								.input-group
@@ -90,23 +90,32 @@ html(lang='en')
 
 		block footer
 			include newsletter
-			mixin listItemFooter(copy, link)
-				li: a(href="#{link}") #{copy}
-			section.prefooter
-				.container-fluid
-					.container
-						.row.menuFooter
-							.col-xs-12
-								ul.list-inline
-									li: a(href="#") Home
-									li: a(href="#") Activitati
-									li: a(href="#") Before & After School
-									li: a(href="#") Despre noi
-									li: a(href="#") News
-									li: a(href="#") Contact
 			section.footer
-				.container-fluid
+				.container-fluid.mx-0
 					.container
+						.row.pb-5
+							section.prefooter
+								.container-fluid
+									.row.menuFooter
+										//-.col-xs-1
+											a.navbar-brand(href='index.html')
+												//-svg.hidden-xs.hidden-sm.hidden-md(viewBox="0 0 445 80" width="332" height="60")
+													use(xlink:href="#logo" x="0" y="0")
+												svg.hidden-lg(viewBox="0 0 170 80" width="170" height="60")
+													use(xlink:href="#logo" x="0" y="0")
+										.col-xs-12
+											ul.list-inline.mx-auto
+												li: a(href="#") Home
+												li: a(href="#") Activitati
+												li: a(href="#") Before & After School
+												li: a(href="#") Despre noi
+												li: a(href="#") News
+												li: a(href="#") Contact
+												li: a(href="#") Orar
+				.container-fluid.links
+					.container.py-5
+						mixin listItemFooter(copy, link)
+							li: a(href="#{link}") #{copy}
 						.row
 							.col-xs-12.col-sm-6.col-md-3.col-md-push-3.cursuriFooter
 								//- hr.visible-xs-block.visible-sm-block

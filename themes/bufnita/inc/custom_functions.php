@@ -262,6 +262,121 @@ function prepare_courses_for_listing() {
 	return $data;
 }
 
+function prepare_courses_for_listing_homepage() {
+	$courses_for_listing_args = array(
+		'post_type' => 'course',
+		'posts_per_page' => '4',
+		'post_status' => 'publish',
+		'meta_query' => array(
+			array(
+				'key'	  => 'buf_show_on_hp_check',
+				'value'	  => 'on',
+				'compare' => '=',
+			),
+		)
+	);
+	$courses_for_listing_qry = new WP_Query($courses_for_listing_args);
+	// The Loop
+	$courses = array();
+	$groups_filter = array(
+		'group_a' => 0,
+		'group_b' => 0,
+		'group_c' => 0,
+		'total' => 0,
+	);
+	$categories_filter = array();
+	if ( $courses_for_listing_qry->have_posts() ) {
+		while ( $courses_for_listing_qry->have_posts() ) {
+			
+			$courses_for_listing_qry->the_post();
+			$current_course = array(
+				'title' => get_the_title(),
+				'duration' => null,
+				'image_url' => (has_post_thumbnail() ? aq_resize( wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ) ), 500, 250) : null),
+				'course_url' => get_the_permalink(),
+			);
+			
+			$terms = get_the_terms(get_the_ID(), 'course_category');
+			if ( isset($terms[0]) ) {
+				$current_course['category_name'] = $terms[0]->name;
+				$current_course['category_slug'] = $terms[0]->slug;
+				if ( isset($categories_filter[$current_course['category_slug']]) ) {
+					$categories_filter[$current_course['category_slug']]['count']++;
+				} else {
+					$categories_filter[$current_course['category_slug']]['count'] = 1;
+				}
+				$categories_filter[$current_course['category_slug']]['name'] = $current_course['category_name'];
+			}
+			
+			$custom_post_fields = get_post_custom( get_the_ID() );
+			$flag_group_counted = false;
+			//mic 
+			if ( (isset($custom_post_fields['buf_mic_price_full'][0]) && $custom_post_fields['buf_mic_price_full'][0] != '' ) || 
+					isset($custom_post_fields['buf_mic_price_discount'][0]) && $custom_post_fields['buf_mic_price_discount'][0] != '') {
+				$current_course['svg_class'][] = 'a';
+				$current_course['mic_category_details'] = array(
+					'price_full' => ( isset($custom_post_fields['buf_mic_price_full'][0]) ? $custom_post_fields['buf_mic_price_full'][0] : null),
+					'price_discount' => ( isset($custom_post_fields['buf_mic_price_discount'][0]) ? $custom_post_fields['buf_mic_price_discount'][0] : null),
+				);
+				if ( ! $current_course['duration'] && isset($custom_post_fields['buf_mic_short_period_desc'][0]) )
+					$current_course['duration'] = $custom_post_fields['buf_mic_short_period_desc'][0];
+				$groups_filter['group_a']++;
+				$flag_group_counted = true;
+			}
+			//mijlociu
+			if ( (isset($custom_post_fields['buf_mijlociu_price_full'][0]) && $custom_post_fields['buf_mijlociu_price_full'][0] != '' ) || 
+					isset($custom_post_fields['buf_mijlociu_price_discount'][0]) && $custom_post_fields['buf_mijlociu_price_discount'][0] != '') {
+				$current_course['svg_class'][] = 'b';
+				$current_course['mijlociu_category_details'] = array(
+					'price_full' => ( isset($custom_post_fields['buf_mijlociu_price_full'][0]) ? $custom_post_fields['buf_mijlociu_price_full'][0] : null),
+					'price_discount' => ( isset($custom_post_fields['buf_mijlociu_price_discount'][0]) ? $custom_post_fields['buf_mijlociu_price_discount'][0] : null),
+				);
+				if ( ! $current_course['duration'] && isset($custom_post_fields['buf_mijlociu_short_period_desc'][0]) )
+					$current_course['duration'] = $custom_post_fields['buf_mijlociu_short_period_desc'][0];
+				$groups_filter['group_b']++;
+				$flag_group_counted = true;
+			}
+			//mare
+			if ( (isset($custom_post_fields['buf_mare_price_full'][0]) && $custom_post_fields['buf_mare_price_full'][0] != '' ) || 
+					isset($custom_post_fields['buf_mare_price_discount'][0]) && $custom_post_fields['buf_mare_price_discount'][0] != '') {
+				$current_course['svg_class'][] = 'c';
+				$current_course['mare_category_details'] = array(
+					'price_full' => ( isset($custom_post_fields['buf_mare_price_full'][0]) ? $custom_post_fields['buf_mare_price_full'][0] : null),
+					'price_discount' => ( isset($custom_post_fields['buf_mare_price_discount'][0]) ? $custom_post_fields['buf_mare_price_discount'][0] : null),
+				);
+				if ( ! $current_course['duration'] && isset($custom_post_fields['buf_mare_short_period_desc'][0]) )
+					$current_course['duration'] = $custom_post_fields['buf_mare_short_period_desc'][0];
+				$groups_filter['group_c']++;
+				$flag_group_counted = true;
+			}
+			if( $flag_group_counted )
+				$groups_filter['total']++;
+			
+			$courses[] = $current_course;
+		}
+	}
+	$categories_filter = array_merge(
+		array('toate' => 
+			array('count' => count($categories_filter), 'name' => 'Toate')), 
+		$categories_filter
+	);
+	$groups = array();
+	$groups_filter = array(
+		'toate-grupele' => array('count' => $groups_filter['total'], 'name' => 'Toate grupele'), 
+		'group_a' => array('count' => $groups_filter['group_a'], 'name' => 'Mici'),
+		'group_b' => array('count' => $groups_filter['group_b'], 'name' => 'Mijlocii'),
+		'group_c' => array('count' => $groups_filter['group_c'], 'name' => 'Mari'),
+	);
+	$data = array(
+		'courses' => $courses,
+		'groups' => $groups_filter,
+		'categories_filter' => $categories_filter,
+	);
+	//echo '<pre>';print_R($data);die;
+	wp_reset_postdata();
+	return $data;
+}
+
 function build_group_slug_from_arr($elem) {
 	return 'group_'.$elem;
 }

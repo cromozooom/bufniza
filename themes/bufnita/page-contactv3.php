@@ -14,7 +14,7 @@ include get_template_directory() . '/inc/preprocessing_form_contact.php';?>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-6">
-                <h4> Adresa mea este x:</h4>
+                <h4> Adresa mea este:</h4>
                 <p>Sector 4,<br>Strada Serg. Nitu Vasile nr. 26,<br>etaj 1 - deasupra farmaciei Belladonna</p>
                 <hr>
                 <h4>Telefon</h4>
@@ -50,7 +50,7 @@ include get_template_directory() . '/inc/preprocessing_form_contact.php';?>
                         <div role="tabpanel" id="contact" class="tab-pane active"><br>
                             <?php echo do_shortcode('[contact-form-7 id="821" title="Contact Form" html_class="contact-form"]'); ?>
                         </div>
-                        <div id="profesor" role="tabpanel" class="tab-pane"><br>
+                        <div id="profesor" role="tabpanel" class="tab-pane"><br>                            
                             <?php echo do_shortcode('[contact-form-7 id="829" title="Profesor" html_class="contact-form"]'); ?>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ include get_template_directory() . '/inc/preprocessing_form_contact.php';?>
             </div>
         </div>
     </section>
-
+	
 
     <?php render_footer()?>
     <!-- Bootstrap core JavaScript-->
@@ -77,7 +77,7 @@ include get_template_directory() . '/inc/preprocessing_form_contact.php';?>
     <script src="<?php echo get_template_directory_uri()?>/assets/javascripts/bootstrap.min.js"></script>
     <!-- yamm-->
     <script src="<?php echo get_template_directory_uri()?>/assets/javascripts/yamm.js"></script>
-
+	
 	<?php wp_footer();?>
   </body>
 </html>

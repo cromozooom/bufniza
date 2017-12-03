@@ -23,17 +23,17 @@ if ( isset($_REQUEST['c']) && $_REQUEST['c']) {
 	}
 }
 if ( isset($_POST) && ! empty($_POST) ) {
-	$captcha = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : null;
-	if(! $captcha){
-		header('Location: ' . $_SERVER['HTTP_REFERER']);
-	}
-	$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfE5QwTAAAAAMg5ufrw-KlM0A8MLiOIFERrKyN5&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
-	$resp = json_decode($response);
-	if($resp && ! $resp->success ) {
-		echo '<h2>You are spammer ! Get the @$%K out</h2>';
-		exit;
-	}
-	$full_name = isset($_POST['full_name']) ? $_POST['full_name'] : '';
+    $captcha = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : null;
+    if (!$captcha) {
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LfE5QwTAAAAAMg5ufrw-KlM0A8MLiOIFERrKyN5&response=" . $captcha . "&remoteip=" . $_SERVER['REMOTE_ADDR']);
+    $resp = json_decode($response);
+    if ($resp && !$resp->success) {
+        echo '<h2>You are spammer ! Get the @$%K out</h2>';
+        exit;
+    }
+    $full_name = isset($_POST['full_name']) ? $_POST['full_name'] : '';
     $email = isset($_POST['email']) ? $_POST['email'] : '';
     $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
     $child_last_name = isset($_POST['child_last_name']) ? $_POST['child_last_name'] : '';
@@ -41,28 +41,40 @@ if ( isset($_POST) && ! empty($_POST) ) {
     $child_category = isset($_POST['child_category']) ? $_POST['child_category'] : '';
     $child_description = isset($_POST['child_description']) ? $_POST['child_description'] : '';
     $course_post_id = isset($_POST['course_post_id']) ? $_POST['course_post_id'] : '';
-	$request_course = get_post($course_post_id);
-	$days = $intervals = array();
-	if ($child_category && in_array($child_category, array('mic', 'mare', 'mijlociu'))) {
-		$subcateg = getCPTCourseFieldsIDMappingLabels();
-		$subcateg = $subcateg[$child_category];
-		
-		foreach ($subcateg['zile'] as $key => $meta_data_key) {
-			if ( isset($_POST[$key]) )
-				$days[] = $meta_data_key;
-		}
-		foreach ($subcateg['interval'] as $key => $meta_data_key) {
-			if ( isset($_POST[$key]) )
-				$intervals[] = $meta_data_key;
-		}
-	}
-	$days = implode(', ', $days);
-	$intervals = implode(', ', $intervals);
-	
-	$to = get_option( 'admin_email', 'laurcalin@yahoo.com' );
-	$subject = ($request_course && $request_course->post_title) ? 
-		('[Notificare] Cerere inscriere pentru cursul ' . $request_course->post_title) : 
-		'[Notificare] Cerere inscriere curs';
+
+    $course_c = isset($_POST['c']) ? $_POST['c'] : '';
+
+    $request_course = get_post($course_post_id);
+    $days = $intervals = array();
+    if ($child_category && in_array($child_category, array('mic', 'mare', 'mijlociu'))) {
+        $subcateg = getCPTCourseFieldsIDMappingLabels();
+        $subcateg = $subcateg[$child_category];
+
+        foreach ($subcateg['zile'] as $key => $meta_data_key) {
+            if (isset($_POST[$key]))
+                $days[] = $meta_data_key;
+        }
+        foreach ($subcateg['interval'] as $key => $meta_data_key) {
+            if (isset($_POST[$key]))
+                $intervals[] = $meta_data_key;
+        }
+    }
+    $days = implode(', ', $days);
+    $intervals = implode(', ', $intervals);
+
+    $to = get_option('admin_email', 'laurcalin@yahoo.com'); //laurcalin@yahoo.com
+
+    $cismigiu = substr($course_c, -8);
+    if ($cismigiu == "cismigiu") {
+    $subject = ($request_course && $request_course->post_title) ?
+        ('[Notificare] Cerere inscriere pentru cursul ' . $request_course->post_title) . " - CISMIGIU" :
+        '[Notificare] Cerere inscriere curs';
+    }else{
+        $subject = ($request_course && $request_course->post_title) ?
+            ('[Notificare] Cerere inscriere pentru cursul ' . $request_course->post_title) :
+            '[Notificare] Cerere inscriere curs';
+    }
+
 	$body = "\n";
 	$body .= "Nume: $full_name\n";
 	$body .= "Email: $email\n";
@@ -96,8 +108,13 @@ if ( isset($_POST) && ! empty($_POST) ) {
 				Formularul dumneavoastra a fost transmis.
 			</div>
 		</div>';
+
+	$debug = '<div class="col-xs-12 col-sm-6"><div class="alert alert-success" style="margin-bottom:15px; padding: 6px 12px 6px 12px;">'.$subject.'.</div></div>';
+
 	$email_message = wp_mail( $to, $subject, $body ) ? true : false;
+
 	$returned_message = $email_message ? $mesaj_success : $mesaj_eroare;
+    //$returned_message = $email_message ? $debug : $mesaj_eroare;
 }
 
 

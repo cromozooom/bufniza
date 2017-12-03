@@ -37,7 +37,7 @@
 								<!-- Mobile sidebar-->
 								<div class="well text-center">
 									<!-- link catre formular-->
-									<a href="/formular?c=<?=get_the_cpt_slug()?>" class="btn btn-lg btn-ghost-type_two">Inscrie-te acum</a>
+									<a href="<?php echo get_home_url(); ?>/formular?c=<?=get_the_cpt_slug()?>" class="btn btn-lg btn-ghost-type_two">Inscrie-te acum</a>
 									<?php render_sidebar_group_categories_widget($categs_data)?>
 								</div>
 								<div class="tags">
@@ -55,7 +55,7 @@
                             <!-- Desktop sidebar (same like in mobile)-->
                             <div class="well text-center">
                                 <!-- link catre formular-->
-								<a href="/formular?c=<?=get_the_cpt_slug()?>" class="btn btn-lg btn-ghost-type_two">Inscrie-te acum</a>
+								<a href="<?php echo get_home_url(); ?>/formular?c=<?=get_the_cpt_slug()?>" class="btn btn-lg btn-ghost-type_two">Inscrie-te acum</a>
                                 <?php render_sidebar_group_categories_widget($categs_data)?></div> 
 								<div class="tags">
 							<?php if ( function_exists('show_share_buttons') ) :?>
@@ -105,7 +105,7 @@
                         <!-- profesori sau profesor-->
                         <div class="profesori">
                             <h3>Profesor (i)</h3>
-							<?foreach( getTeachersAssignedToCourse($teachers_ids) as $teacher):?>
+							<?php foreach( getTeachersAssignedToCourse($teachers_ids) as $teacher):?>
                             <div class="clearfix"></div>
                             <hr>
                             <div class="profesor">

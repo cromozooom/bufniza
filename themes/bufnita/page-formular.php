@@ -19,7 +19,7 @@ include get_template_directory() . '/inc/preprocessing_form.php';?>
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <form method="post" id="contact-form" action="/formular/" data-toggle="validator">
+                        <form method="post" id="contact-form" action="<?php echo get_home_url(); ?>/formular/" data-toggle="validator">
 						<?php if ( $returned_message ) :?>
 						<div class="row">
 							<?=$returned_message?>
@@ -85,7 +85,13 @@ include get_template_directory() . '/inc/preprocessing_form.php';?>
                                     </div>
                                 </div>
                             </div>
+                            
+                            
                             <div class="row">
+                            
+                            <?php 
+							if(isset($_GET['c']) && $_GET['c']=="after-school"){ echo '<br />'; }else{ ?>
+                               
                                 <div class="col-xs-12 sectionPadding">
                                     <h3 class="text-center"> Optiuni pentru acesta activitate</h3>
                                 </div>
@@ -93,7 +99,9 @@ include get_template_directory() . '/inc/preprocessing_form.php';?>
                                 <?php foreach ( array('mic', 'mijlociu', 'mare') as $group) :?>
 								<?php render_footer_form($group, $data_from_course, $data_from_course["render_footer_{$group}"]);?>
 								<?php endforeach;?>
-								
+							
+                            <?php } ?>
+                            
 								<div class="col-xs-8 col-sm-offset-4 col-sm-4" style="padding-top:10px;">
 									<div class="g-recaptcha" data-sitekey="6LfE5QwTAAAAADlSDsLRCsODreMQK-nedb7Lda2K"></div>
 								</div>
@@ -101,9 +109,10 @@ include get_template_directory() . '/inc/preprocessing_form.php';?>
 									<a href="" id="contact-form-submit" class="btn btn-lg btn-ghost-type_two">Inscrie-te acum</a>
 								</div>
                             </div>
+                            
 							<div class="row">
                                 <input type="hidden" name="course_post_id" value="<?=$data_from_course["id"]?>" />
-								<input type="hidden" name="c" value="<?=$data_from_course["c"]?>" />
+                                <input type="hidden" name="c" value="<?=$data_from_course["c"]?>" />
                             </div>
                         </form>
                     </div>
